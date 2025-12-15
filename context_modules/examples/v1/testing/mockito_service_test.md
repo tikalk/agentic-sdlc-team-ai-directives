@@ -66,6 +66,7 @@ class CustomerServiceTest {
             .thenReturn(Optional.of(existingCustomer));
         when(customerRepository.save(any(Customer.class)))
             .thenAnswer(invocation -> invocation.getArgument(0));
+        ArgumentCaptor<Customer> customerCaptor = ArgumentCaptor.forClass(Customer.class);
         
         // Act
         Customer updated = customerService.updateCustomerStatus(customerId, "inactive");
@@ -73,7 +74,10 @@ class CustomerServiceTest {
         // Assert
         assertEquals("inactive", updated.getStatus());
         verify(customerRepository).findById(customerId);
-        verify(customerRepository).save(existingCustomer);
+        verify(customerRepository).save(customerCaptor.capture());
+        Customer savedCustomer = customerCaptor.getValue();
+        assertEquals("inactive", savedCustomer.getStatus());
+        assertEquals(customerId, savedCustomer.getId());
     }
     
     @Test
