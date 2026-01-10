@@ -18,12 +18,12 @@ The repository's philosophy is centered on serving a central system, not individ
 
 ```
 team-ai-directives/
-├── constitution.md            # The single, foundational "Why". Contains the non-negotiable engineering principles that govern all AI behavior.
 ├── README.md                  # Overview of the repository's purpose, layout, and usage instructions for contributors and consumers.
 ├── CONTRIBUTING.md            # Guidelines for contributing to the repository, including pull request processes, code standards, and governance rules.
 ├── CHANGELOG.md               # A log of changes for each version tag, documenting updates, fixes, and breaking changes to support versioning.
 ├── .mcp.json                  # Configuration manifest for the platform, defining approved autonomous agents and specialized tools.
 └── context_modules/           # The "Library": The versioned, consumable "How". Contains canonical context modules for the spec-kit CLI and MCP server.
+    ├── constitution.md        # The single, foundational "Why". Contains the non-negotiable engineering principles that govern all AI behavior.
     ├── rules/                 # Explicit guidelines for style, security standards, testing practices, and architectural patterns.
     │   ├── style_guides/
     │   ├── security/
@@ -41,11 +41,11 @@ team-ai-directives/
 * **README.md:** This file. Provides an overview of the repository's purpose, layout, and usage instructions for contributors and consumers.
 * **CONTRIBUTING.md:** Guidelines for contributing to the repository, including pull request processes, code standards, and governance rules.
 * **CHANGELOG.md:** A log of changes for each version tag, documenting updates, fixes, and breaking changes to support versioning.
-* **constitution.md:** The single, foundational "Why". Contains the non-negotiable engineering principles that govern all AI behavior.
 * **.mcp.json:** Configuration manifest for the platform, defining approved autonomous agents and specialized tools.
 
 ### Context Modules
 * **context_modules/:** The "Library": The versioned, consumable "How". Contains canonical context modules for the spec-kit CLI and MCP server.
+* **context_modules/constitution.md:** The single, foundational "Why". Contains the non-negotiable engineering principles that govern all AI behavior.
 * **context_modules/rules/:** Explicit guidelines for style, security standards, testing practices, and architectural patterns.
 * **context_modules/examples/:** High-quality code examples that serve as a "gold standard" for the AI to follow, including testing and reusable prompts.
 * **context_modules/personas/:** Pre-defined AI personalities tailored for specific tasks (e.g., "senior python developer," "security expert").

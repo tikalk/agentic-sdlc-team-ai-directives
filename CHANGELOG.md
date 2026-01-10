@@ -9,3 +9,4 @@
 - Restructured constitution: moved language-specific items (dependency injection, null safety) to rules/style-guides/
 - Generalized dependency injection as neutral rule
 - Renamed examples/patterns/ to examples/prompts/ for clarity (contains prompt templates)
+- Moved constitution.md from root to context_modules/ for better organization of guidance content
