@@ -14,3 +14,9 @@
 
 5. **Documentation Matters**  
    Capture assumptions, API contracts, and hand-off notes in the repo. Agents and humans rely on clear context to move fast safely.
+
+6. **Stateless Services**  
+   All services should be designed to be stateless, meaning they do not maintain any internal state between requests. This ensures scalability, reliability, and ease of deployment in cloud environments. State should be externalized to databases or caches as needed.
+
+7. **Zero Trust Security Model**  
+   Adopt a zero trust approach where no entity is trusted by default, even if it's inside the network perimeter. Always verify and authenticate every request, implement least privilege access, and continuously monitor for threats.

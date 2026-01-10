@@ -18,38 +18,38 @@ The repository's philosophy is centered on serving a central system, not individ
 
 ```
 team-ai-directives/
-├── README.md
-├── CONTRIBUTING.md
-├── .mcp.json
-└── context_modules/
-    ├── constitution.md   # <-- The foundational principles for all AI behavior
-    ├── examples/
+├── constitution.md            # The single, foundational "Why". Contains the non-negotiable engineering principles that govern all AI behavior.
+├── README.md                  # Overview of the repository's purpose, layout, and usage instructions for contributors and consumers.
+├── CONTRIBUTING.md            # Guidelines for contributing to the repository, including pull request processes, code standards, and governance rules.
+├── CHANGELOG.md               # A log of changes for each version tag, documenting updates, fixes, and breaking changes to support versioning.
+├── .mcp.json                  # Configuration manifest for the platform, defining approved autonomous agents and specialized tools.
+└── context_modules/           # The "Library": The versioned, consumable "How". Contains canonical context modules for the spec-kit CLI and MCP server.
+    ├── rules/                 # Explicit guidelines for style, security standards, testing practices, and architectural patterns.
+    │   ├── style_guides/
+    │   ├── security/
+    │   └── testing/
+    ├── examples/              # High-quality code examples that serve as a "gold standard" for the AI to follow, including testing and reusable prompts.
     │   ├── testing/
-    │   │   └── pytest_class_based.md
-    │   └── …
+    │   └── prompts/
     ├── personas/
-    │   ├── senior_python_developer.md
-    │   └── …
-    ├── principles/
-    │   ├── stateless_services.md
-    │   ├── zero_trust_security_model.md
-    │   └── …
-    └── rules/
-        ├── security/
-        │   └── prevent_sql_injection.md
-        └── style-guides/
-            └── python_pep8_and_docstrings.md
+    └── skills/
 ```
 
 ## Directory Functions
 
-* **/context_modules/:** The heart of the repository. This is the canonical source for the spec-kit CLI (and MCP server) pulls from when preparing specifications, plans, tasks, and implementations.
-* **.mcp.json:** This file is a configuration manifest that acts as a service directory for the platform. It defines the approved autonomous agents and specialized tools the team can use, telling the spec-kit CLI and any orchestration server how to connect to them.
-* **constitution.md:** The most important file in the repository. It contains the foundational, non-negotiable engineering principles that govern all AI behavior. It is injected by the CLI (and any MCP orchestration) as the base context for major planning tasks.
-* **/examples/:** High-quality code **examples** that serve as a "gold standard" for the AI to follow.
-* **/personas/:** Pre-defined AI personalities tailored for specific tasks (e.g., "senior python developer," "security expert").
-* **/principles/:** Contains high-level, foundational engineering principles that can be imported into a project's constitution.md.
-* **/rules/:** Explicit guidelines for style, security standards, and architectural patterns.
+### Top-Level Files
+* **README.md:** This file. Provides an overview of the repository's purpose, layout, and usage instructions for contributors and consumers.
+* **CONTRIBUTING.md:** Guidelines for contributing to the repository, including pull request processes, code standards, and governance rules.
+* **CHANGELOG.md:** A log of changes for each version tag, documenting updates, fixes, and breaking changes to support versioning.
+* **constitution.md:** The single, foundational "Why". Contains the non-negotiable engineering principles that govern all AI behavior.
+* **.mcp.json:** Configuration manifest for the platform, defining approved autonomous agents and specialized tools.
+
+### Context Modules
+* **context_modules/:** The "Library": The versioned, consumable "How". Contains canonical context modules for the spec-kit CLI and MCP server.
+* **context_modules/rules/:** Explicit guidelines for style, security standards, testing practices, and architectural patterns.
+* **context_modules/examples/:** High-quality code examples that serve as a "gold standard" for the AI to follow, including testing and reusable prompts.
+* **context_modules/personas/:** Pre-defined AI personalities tailored for specific tasks (e.g., "senior python developer," "security expert").
+* **context_modules/skills/:** Specialized capabilities and tools available to agents.
 * **A Note on Versioning:** Treating our directives as a versioned library is non-negotiable. We use git tags (v1.0.0, v2.0.0, etc.) to manage breaking changes gracefully and support multiple standards across different projects.
 
 ## Usage
