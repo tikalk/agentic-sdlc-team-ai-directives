@@ -11,3 +11,7 @@
 - Generalized dependency injection as neutral rule
 - Renamed examples/patterns/ to examples/prompts/ for clarity (contains prompt templates)
 - Moved constitution.md from root to context_modules/ for better organization of guidance content
+## [Unreleased] - 2025-01-16
+- Added Spring Boot framework patterns (constructor injection, JPA, testing, configuration)
+- Added DevOps Engineer persona (generic DevOps philosophy, tool-agnostic)
+- Added AGENTS.md meta-pattern for skills (self-contained, portable, progressive disclosure)
