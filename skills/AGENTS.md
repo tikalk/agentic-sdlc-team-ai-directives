@@ -2,7 +2,20 @@
 
 ## Philosophy
 
-Skills in this repository are **self-contained** and **portable**. They must work standalone on any agent platform (Claude Code, Cursor, Copilot, etc.) without requiring to context_modules repository at runtime.
+This repository supports **two types of skills**:
+
+### Local Skills
+- **Self-contained** and **portable** for team-specific customization
+- Work standalone on any agent platform
+- Include team context, references, and scripts
+- Must not require context_modules repository at runtime
+
+### External Skills  
+- **URL-based** references to skills from other repositories
+- Fetched on-demand using agent webfetch capabilities
+- No local wrapper or customization needed
+- Listed in `external_skills.md` registry
+- Always up-to-date from external maintainers
 
 ## Directory Structure
 
@@ -108,17 +121,66 @@ Use standard tools for validation:
 # Verify all file references exist
 ```
 
-## Example Complete Skill
+## Example Complete Skills
 
-See `dbt-template/` for reference implementation of:
+### Local Skill Example
+See `dbt-template/` for reference implementation of local skills with:
 - Build-time content extraction
 - Local references directory
-- Grep-based search patterns
-- Multi-file references
+- Team-specific customization
+- Scripts and automation
+
+### External Skill Example
+See `external_skills.md` for URL-based external skills like:
+- vercel-react-best-practices (fetched from Vercel repository)
+- vercel-web-design-guidelines (fetched on-demand)
+- vercel-composition-patterns (React component patterns)
 
 ## External Skills
 
-External skills are referenced via URL in `external_skills.md` and fetched on-demand using agent webfetch capabilities. See `external_skills.md` for the complete registry of available external skills.
+External skills are referenced via URL in `external_skills.md` and fetched on-demand using agent webfetch capabilities.
+
+### When to Use External Skills
+- When you need standardized, community-maintained skills
+- When you want up-to-date content from external repositories
+- When you don't need team-specific customization
+- When you want to leverage existing skill ecosystems
+
+### External Skills Registry
+See `external_skills.md` for the complete registry of available external skills from:
+- Vercel agent-skills repository
+- Community skill repositories
+- Third-party skill providers
+
+### How External Skills Work
+1. **Discovery**: Spec-kit scans external skills registry and matches skills to feature descriptions using LLM
+2. **Selection**: You choose which external skills to use
+3. **Fetch**: Spec-kit uses agent's webfetch tool to fetch the SKILL.md from external URL
+4. **Context**: The fetched skill is injected into your workflow context
+5. **Usage**: You can reference the skill during `/speckit.plan` and `/speckit.implement`
+
+## Local vs External Skills Decision Guide
+
+### Use Local Skills When:
+- You need team-specific context or customization
+- You have internal references to context_modules
+- You need scripts or automation specific to your team
+- You want to maintain full control over skill content
+- You have proprietary or sensitive guidelines
+
+### Use External Skills When:
+- You need standardized best practices from external experts
+- You want always-up-to-date content from maintainers
+- You don't need team-specific customization
+- You want to reduce maintenance overhead
+- You want to leverage community knowledge
+
+### Hybrid Approach
+You can combine both approaches:
+- Use external skills for standardized guidelines
+- Create local skills for team-specific customization
+- Reference external skills from local skills when needed
+- Mix and match based on your specific needs
 
 ## Reference Format Summary
 
