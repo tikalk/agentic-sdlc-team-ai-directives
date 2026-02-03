@@ -2,17 +2,30 @@
 
 ## Philosophy
 
-Skills in this repository are **self-contained** and **portable**. They must work standalone on any agent platform (Claude Code, Cursor, Copilot, etc.) without requiring to context_modules repository at runtime.
+This repository supports **two types of skills**:
+
+### Local Skills
+- **Self-contained** and **portable** for team-specific customization
+- Work standalone on any agent platform
+- Include team context, references, and scripts
+- Must not require context_modules repository at runtime
+
+### External Skills  
+- **URL-based** references to skills from other repositories
+- Fetched on-demand using agent webfetch capabilities
+- No local wrapper or customization needed
+- Listed in `external_skills.md` registry
+- Always up-to-date from external maintainers
 
 ## Directory Structure
 
 ```
 skill-name/
 ├── SKILL.md              # Required: Main instructions
-├── references/             # Optional: Extracted content at build time
-│   └── *.md           # Copied from context_modules for offline use
+├── references/             # Optional: References to context_modules
+│   └── *.md           # Local references, not copied content
 └── scripts/               # Optional: Automation scripts
-    └── *.sh            # Bash scripts (preferred)
+    └── *.sh            # Bash scripts (if needed)
 ```
 
 ## Self-Contained Rule
@@ -20,7 +33,7 @@ skill-name/
 ✅ **Skills MUST NOT reference context_modules using `@rule:`, `@persona:`, or `@example:` syntax.**
 
 Instead:
-- Extract content into `references/` at build time
+- Use local references: `See @rule:security/prevent_sql_injection.md`
 - Use relative paths: `[Link text](references/file.md)`
 - Use grep for on-demand search: `grep -l "pattern" references/`
 
@@ -28,34 +41,32 @@ Instead:
 
 ## Frontmatter Requirements
 
-All SKILL.md files must include YAML frontmatter:
+All SKILL.md files must include simple YAML frontmatter:
 
 ```yaml
 ---
-name: skill-name              # kebab-case, 1-64 chars
+name: skill-name              # Required: kebab-case, 1-64 chars
 description: One-sentence description with trigger keywords. 1-1024 chars.
 license: MIT                   # Optional
-metadata:
-  author: your-name          # Optional
-  version: "1.0.0"          # Optional
-  category: category-name       # Optional
 ---
 ```
 
-## Content Extraction (Build-Time)
+**Note**: External skills are referenced via URL in `external_skills.md` and fetched on-demand.
+
+## Content Extraction (Local References)
 
 When a skill needs content from context_modules:
 
-1. **Extract at creation time:**
+1. **Create local reference at creation time:**
    ```bash
-   cp context_modules/rules/security/prevent_sql_injection.md \
-      skills/my-skill/references/rule_sql_injection.md
+   # Create reference file with local pointer
+   echo "See @rule:security/prevent_sql_injection.md for detailed implementation" > references/security_rule.md
    ```
 
 2. **Document in SKILL.md:**
    ```markdown
    ## References
-   - [SQL Injection Prevention](references/rule_sql_injection.md)
+   - [Security Prevention](references/security_rule.md)
    ```
 
 3. **Use grep for search:**
@@ -70,7 +81,7 @@ When a skill needs content from context_modules:
 
 - **Skill directory**: `kebab-case` (e.g., `dbt-cli-tooling`)
 - **SKILL.md**: Always uppercase, exact filename
-- **References**: Descriptive names (e.g., `persona_data_analyst.md`)
+- **References**: Descriptive names (e.g., `constitution.md`)
 - **Scripts**: `kebab-case.sh` (e.g., `validate-dag.sh`)
 
 ## Progressive Disclosure
@@ -110,13 +121,36 @@ Use standard tools for validation:
 # Verify all file references exist
 ```
 
-## Example Complete Skill
+## Example Complete Skills
 
-See `dbt-template/` for reference implementation of:
-- Build-time content extraction
+### Local Skill Example
+See `dbt-template/` for reference implementation of local skills with:
+- Simple frontmatter structure
 - Local references directory
-- Grep-based search patterns
-- Multi-file references
+- Team-specific patterns
+- Progressive disclosure organization
+
+### External Skill Example
+See `external_skills.md` for URL-based external skills like:
+- vercel-react-best-practices (fetched from Vercel repository)
+- vercel-web-design-guidelines (fetched on-demand)
+- vercel-composition-patterns (React component patterns)
+
+## External Skills
+
+External skills are referenced via URL in `external_skills.md` and fetched on-demand using agent webfetch capabilities.
+
+### When to Use External Skills
+- When you need standardized, community-maintained skills
+- When you want up-to-date content from external repositories
+- When you don't need team-specific customization
+- When you want to leverage existing skill ecosystems
+
+### External Skills Registry
+See `external_skills.md` for the complete registry of available external skills from:
+- Vercel agent-skills repository
+- Community skill repositories
+- Third-party skill providers
 
 ## Reference Format Summary
 
@@ -124,4 +158,28 @@ See `dbt-template/` for reference implementation of:
 |-------|-----------|---------|
 | Skills → Context Modules | **Not allowed** | N/A - skills must be self-contained |
 | Skills → Skills | Optional | `[Link text](../other-skill/SKILL.md)` |
-| Skills → Internal | Required | `[Link text](references/file.md)` + `grep -l "pattern" references/` |
+| Skills → Internal | Required | `[Link text](references/file.md)` + local references |
+| Skills → External | Optional | See `external_skills.md` for URL-based references |
+
+## Local vs External Skills Decision Guide
+
+### Use Local Skills When:
+- You need team-specific context or customization
+- You have internal references to context_modules
+- You need scripts or automation specific to your team
+- You want to maintain full control over skill content
+- You have proprietary or sensitive guidelines
+
+### Use External Skills When:
+- You need standardized best practices from external experts
+- You want always-up-to-date content from maintainers
+- You don't need team-specific customization
+- You want to reduce maintenance overhead
+- You want to leverage community knowledge
+
+### Hybrid Approach
+You can combine both approaches:
+- Use external skills for standardized guidelines
+- Create local skills for team-specific customization
+- Reference external skills from local skills when needed
+- Mix and match based on your specific needs
