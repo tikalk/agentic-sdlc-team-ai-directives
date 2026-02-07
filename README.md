@@ -137,7 +137,110 @@ the Skills Package Manager:
 3. Shows recommended skills to users
 4. Enforces blocked skill policies
 
-See [.skills.json](.skills.json) for the current team skill configuration.
+##### How Skills Work
+
+**Skills** are reusable, versioned knowledge packages that guide AI agents
+in making consistent technical decisions. They embed:
+
+* **Best Practices** - Framework patterns, testing strategies, code
+  organization
+* **Team Standards** - Coding conventions, naming patterns, architectural
+  principles
+* **Domain Knowledge** - Business logic, compliance requirements, domain
+  patterns
+* **Quality Guidelines** - Performance optimization, security hardening,
+  accessibility
+
+**Auto-Discovery Flow**:
+
+1. User runs `/speckit.specify "Build a React component with TypeScript"`
+2. Skills Package Manager analyzes the feature description
+3. Calculates relevance score for each installed skill (60% description
+   match, 40% content match)
+4. Injects top 3 matching skills into `specs/{feature}/context.md`
+5. AI agent follows skill guidance during `/speckit.plan` and
+   `/speckit.implement`
+
+**Example** - When creating a React feature:
+
+```markdown
+## Relevant Skills (Auto-Detected)
+
+- **react-best-practices**@1.2.0 (confidence: 0.95)
+  - Component composition, hooks patterns, performance optimization
+
+- **typescript-guidelines**@1.0.0 (confidence: 0.82)
+  - Type safety, interface design, error handling
+
+- **testing-strategies**@2.0.1 (confidence: 0.78)
+  - Test organization, coverage targets, component testing patterns
+```
+
+##### Managing Team Skills
+
+As a team admin, you control which skills are available:
+
+* **required** - Team-wide practices everyone must follow
+* **recommended** - Encouraged but optional skills
+* **internal** - Custom skills built by your team (in `skills/` directory)
+* **blocked** - Deprecated or unsafe skills that prevent installation
+
+Example `.skills.json` configuration:
+
+```json
+{
+  "version": "1.0.0",
+  "source": "team-ai-directives",
+  "skills": {
+    "required": {
+      "github:vercel-labs/agent-skills/react-best-practices": "^1.2.0",
+      "github:your-org/internal-skills/company-patterns": "~2.0.0"
+    },
+    "recommended": {
+      "github:vercel-labs/agent-skills/web-design-guidelines": "~1.0.0"
+    },
+    "internal": {
+      "local:./skills/dbt-workflow": "*"
+    },
+    "blocked": [
+      "github:unsafe-org/deprecated-skill"
+    ]
+  },
+  "policy": {
+    "auto_install_required": true,
+    "enforce_blocked": true,
+    "allow_project_override": true
+  }
+}
+```
+
+##### Available CLI Commands
+
+Team members can manage skills via the `specify skill` command:
+
+```bash
+# Search for skills in the public registry
+specify skill search "react best practices"
+
+# Install a skill from GitHub
+specify skill install github:vercel-labs/agent-skills/react-best-practices
+
+# List installed skills
+specify skill list
+
+# Evaluate skill quality (100-point scoring)
+specify skill eval ./my-skill --review
+
+# Sync with team manifest
+specify skill sync-team --dry-run
+
+# Update skills
+specify skill update --all
+```
+
+See [.skills.json](.skills.json) for current team skill configuration and
+[Skills Package Manager Documentation](https://github.com/tikalk/agentic-sdlc-spec-kit#-skills-package-manager)
+for detailed information.
 
 ### Versioning
 
