@@ -94,9 +94,8 @@ my-analytics-project/
 
 ## References
 
-- **Team Constitution**: See @constitution.md (Principles 2, 4, 9, 11)
+- **Team Constitution**: See references/constitution.md (Principles 2, 4, 9, 11)
 - **Testing Guidelines**: See references/testing_guide.md for data quality patterns
-- **Security Guidelines**: Follow team security practices for data access
 
 ## Usage Examples
 

@@ -123,9 +123,9 @@ license: MIT                   # Optional: License identifier
 **Rationale**: Skills should be portable and work standalone
 
 **Implementation**:
-- ✅ **DO**: Use relative paths: `[Link text](references/file.md)`
 - ✅ **DO**: Use local references: `See @rule:security/prevent_sql_injection.md`
-- ❌ **DON'T**: Use direct `@rule:` syntax in skill content
+- ✅ **DO**: Use relative paths: `[Link text](references/file.md)`
+- ❌ **DON'T**: Use `@rule:security/prevent_sql_injection.md` in skill content
 - ❌ **DON'T**: Copy content from context_modules
 
 **Reference**: @skills/AGENTS.md
@@ -147,7 +147,7 @@ Skills load in three levels for context efficiency:
 
 1. **Level 1 (metadata)**: `name` + `description` loaded at startup (~100 tokens)
 2. **Level 2 (instructions)**: Full `SKILL.md` loaded when triggered (~5000 tokens)
-3. **Level 3 (resources)**: Files in `references/` loaded on-demand via tools
+3. **Level 3 (resources)**: Files in `references/` directory loaded on-demand via tools
 
 This pattern mirrors how you'd onboard a new team member—give them overview first, detailed instructions second, and reference materials on demand.
 

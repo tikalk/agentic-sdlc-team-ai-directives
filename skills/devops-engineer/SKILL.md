@@ -34,7 +34,7 @@ DevOps engineering patterns and best practices for:
 - Follow GitOps workflows for infrastructure changes
 - Version control all infrastructure configurations
 
-**References**: See references/crossplane_compositions.md, references/helm_chart_library.md
+**References**: See references/helm_chart_library.md, references/crossplane_compositions.md
 
 ### CI/CD Pipeline Automation
 

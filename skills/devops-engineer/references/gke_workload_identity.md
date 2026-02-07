@@ -23,7 +23,6 @@ See @rule:devops/gke_workload_identity.md for complete GKE Workload Identity pat
 ### Implementation Patterns
 - ServiceAccount annotation for authentication
 - Pod service account reference
-- IAM binding for access control
 - Values configuration for Helm charts
 
 ### Security Advantages

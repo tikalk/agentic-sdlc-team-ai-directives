@@ -22,10 +22,10 @@ This repository supports **two types of skills**:
 ```
 skill-name/
 ├── SKILL.md              # Required: Main instructions
-├── references/             # Optional: Extracted content at build time
-│   └── *.md           # Copied from context_modules for offline use
+├── references/             # Optional: References to context_modules
+│   └── *.md           # Local references, not copied content
 └── scripts/               # Optional: Automation scripts
-    └── *.sh            # Bash scripts (preferred)
+    └── *.sh            # Bash scripts (if needed)
 ```
 
 ## Self-Contained Rule
@@ -33,7 +33,7 @@ skill-name/
 ✅ **Skills MUST NOT reference context_modules using `@rule:`, `@persona:`, or `@example:` syntax.**
 
 Instead:
-- Extract content into `references/` at build time
+- Use local references: `See @rule:security/prevent_sql_injection.md`
 - Use relative paths: `[Link text](references/file.md)`
 - Use grep for on-demand search: `grep -l "pattern" references/`
 
@@ -45,7 +45,7 @@ All SKILL.md files must include simple YAML frontmatter:
 
 ```yaml
 ---
-name: skill-name              # kebab-case, 1-64 chars
+name: skill-name              # Required: kebab-case, 1-64 chars
 description: One-sentence description with trigger keywords. 1-1024 chars.
 license: MIT                   # Optional
 ---
@@ -53,20 +53,20 @@ license: MIT                   # Optional
 
 **Note**: External skills are referenced via URL in `external_skills.md` and fetched on-demand.
 
-## Content Extraction (Build-Time)
+## Content Extraction (Local References)
 
 When a skill needs content from context_modules:
 
-1. **Extract at creation time:**
+1. **Create local reference at creation time:**
    ```bash
-   cp context_modules/rules/security/prevent_sql_injection.md \
-      skills/my-skill/references/rule_sql_injection.md
+   # Create reference file with local pointer
+   echo "See @rule:security/prevent_sql_injection.md for detailed implementation" > references/security_rule.md
    ```
 
 2. **Document in SKILL.md:**
    ```markdown
    ## References
-   - [SQL Injection Prevention](references/rule_sql_injection.md)
+   - [Security Prevention](references/security_rule.md)
    ```
 
 3. **Use grep for search:**
@@ -81,7 +81,7 @@ When a skill needs content from context_modules:
 
 - **Skill directory**: `kebab-case` (e.g., `dbt-cli-tooling`)
 - **SKILL.md**: Always uppercase, exact filename
-- **References**: Descriptive names (e.g., `persona_data_analyst.md`)
+- **References**: Descriptive names (e.g., `constitution.md`)
 - **Scripts**: `kebab-case.sh` (e.g., `validate-dag.sh`)
 
 ## Progressive Disclosure
@@ -125,10 +125,10 @@ Use standard tools for validation:
 
 ### Local Skill Example
 See `dbt-template/` for reference implementation of local skills with:
-- Build-time content extraction
+- Simple frontmatter structure
 - Local references directory
-- Team-specific customization
-- Scripts and automation
+- Team-specific patterns
+- Progressive disclosure organization
 
 ### External Skill Example
 See `external_skills.md` for URL-based external skills like:
@@ -152,12 +152,14 @@ See `external_skills.md` for the complete registry of available external skills 
 - Community skill repositories
 - Third-party skill providers
 
-### How External Skills Work
-1. **Discovery**: Spec-kit scans external skills registry and matches skills to feature descriptions using LLM
-2. **Selection**: You choose which external skills to use
-3. **Fetch**: Spec-kit uses agent's webfetch tool to fetch the SKILL.md from external URL
-4. **Context**: The fetched skill is injected into your workflow context
-5. **Usage**: You can reference the skill during `/speckit.plan` and `/speckit.implement`
+## Reference Format Summary
+
+| Type | Use In | Syntax |
+|-------|-----------|---------|
+| Skills → Context Modules | **Not allowed** | N/A - skills must be self-contained |
+| Skills → Skills | Optional | `[Link text](../other-skill/SKILL.md)` |
+| Skills → Internal | Required | `[Link text](references/file.md)` + local references |
+| Skills → External | Optional | See `external_skills.md` for URL-based references |
 
 ## Local vs External Skills Decision Guide
 
@@ -181,12 +183,3 @@ You can combine both approaches:
 - Create local skills for team-specific customization
 - Reference external skills from local skills when needed
 - Mix and match based on your specific needs
-
-## Reference Format Summary
-
-| Type | Use In | Syntax |
-|-------|-----------|---------|
-| Skills → Context Modules | **Not allowed** | N/A - skills must be self-contained |
-| Skills → Skills | Optional | `[Link text](../other-skill/SKILL.md)` |
-| Skills → Internal | Required | `[Link text](references/file.md)` + `grep -l "pattern" references/` |
-| Skills → External | Optional | See `external_skills.md` for URL-based references |
