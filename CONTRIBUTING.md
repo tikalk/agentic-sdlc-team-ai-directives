@@ -77,7 +77,7 @@ license: MIT                   # Optional
 
 ### Skill Development Process
 
-1. **Create Skill Directory**: Follow the structure in `skills/AGENTS.md`
+1. **Create Skill Directory**: Follow the structure in `AGENTS.md`
 2. **Add Frontmatter**: Include simple name and description in SKILL.md
 3. **Test Skill**: Ensure skill works standalone with Read/Grep/Bash tools
 4. **Submit PR**: Include skill description and testing validation

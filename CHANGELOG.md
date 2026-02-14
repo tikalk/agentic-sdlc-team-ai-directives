@@ -1,5 +1,26 @@
 # Changelog
 
+## [v1.2.0] - 2025-02-14
+
+### Lean Starter Kit Refactor
+- **Added root `AGENTS.md`**: Instructions for AI agents on how to use the repository
+- **Added `GETTING_STARTED.md`**: 5-minute quickstart guide for new users
+- **Updated `README.md`**: Repositioned as "Team AI Directives Starter Kit"
+- **Updated personas**: Added Rule References to Java, Python, Data Analyst, DevOps personas
+
+### Architecture Simplification
+- **Skills are self-contained**: Removed all `@rule:/@example:` references from SKILL.md files
+- **Rules via personas**: Rules now accessed through persona Rule References, not skills
+- **Deleted redundant files**:
+  - `skills/AGENTS.md` (moved to root)
+  - `skills/SKILL_TEMPLATES.md` (redundant with AGENTS.md)
+  - `skills/external_skills.md` (replaced by `.skills.json` registry)
+
+### Breaking Changes
+- `skills/AGENTS.md` deleted - use root `AGENTS.md` instead
+- `skills/SKILL_TEMPLATES.md` deleted - use root `AGENTS.md` instead
+- Skills no longer contain `@rule:` or `@example:` references
+
 ## [v1.1.0] - 2025-02-01
 
 ### Skills Simplification & External Skills Registry
