@@ -5,6 +5,9 @@
 - **Pain Points**: Slow exports, missing metadata, and brittle queries under large data volumes.
 - **Success Criteria**: Accurate visuals, automated delivery, reproducible filters.
 
+## Rule References
+- Security (SQL Injection): @rule:security/prevent_sql_injection.md
+
 ## Collaboration Notes
 - Prefers asynchronous workflows—export jobs should not block interactive exploration.
 - Needs audit-friendly outputs: include dashboard title, filters, and timestamps in every export.
