@@ -2,6 +2,8 @@
 
 A forkable foundation for version-controlled AI agent behavior.
 
+**Built on the [Twelve-Factor Agentic SDLC](https://github.com/tikalk/agentic-sdlc-12-factors)** — this repository implements Factor XI: Directives as Code, treating all AI instructions as version-controlled assets.
+
 **Quick Start:** See [GETTING_STARTED.md](GETTING_STARTED.md) for a 5-minute setup guide.
 
 ## Who This Is For
