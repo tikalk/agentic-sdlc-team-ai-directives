@@ -49,6 +49,34 @@
         "categories": ["frontend", "ui", "ux", "accessibility", "design"],
         "source": "https://github.com/vercel-labs/agent-skills",
         "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/web-design-guidelines/SKILL.md"
+      },
+      "muratcankoylan/context-engineering-fundamentals": {
+        "version": "^1.0.0",
+        "description": "Understand context, context windows, and anatomy of context in agent systems. Foundation for effective AI agent interactions.",
+        "categories": ["context-engineering", "fundamentals", "ai"],
+        "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/context-fundamentals/SKILL.md"
+      },
+      "muratcankoylan/context-degradation": {
+        "version": "^1.0.0",
+        "description": "Recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash. Debug agent context issues.",
+        "categories": ["context-engineering", "debugging", "ai"],
+        "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/context-degradation/SKILL.md"
+      },
+      "muratcankoylan/evaluation": {
+        "version": "^1.0.0",
+        "description": "Build evaluation frameworks for agent systems. Test and measure AI agent performance.",
+        "categories": ["testing", "evaluation", "ai"],
+        "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/evaluation/SKILL.md"
+      },
+      "muratcankoylan/advanced-evaluation": {
+        "version": "^1.0.0",
+        "description": "LLM-as-a-Judge techniques: direct scoring, pairwise comparison, rubric generation, and bias mitigation.",
+        "categories": ["testing", "evaluation", "llm-as-judge", "ai"],
+        "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+        "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/advanced-evaluation/SKILL.md"
       }
     },
     "internal": {
