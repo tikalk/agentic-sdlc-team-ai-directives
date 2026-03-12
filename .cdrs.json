@@ -1,0 +1,171 @@
+{
+  "version": "1.0.0",
+  "description": "Context module decision records - tracks context_modules/ contents",
+  "modules": {
+    "senior_python_developer": {
+      "path": "personas/senior_python_developer.md",
+      "type": "persona",
+      "status": "active"
+    },
+    "senior_java_developer": {
+      "path": "personas/senior_java_developer.md",
+      "type": "persona",
+      "status": "active"
+    },
+    "data_analyst": {
+      "path": "personas/data_analyst.md",
+      "type": "persona",
+      "status": "active"
+    },
+    "devops_engineer": {
+      "path": "personas/devops_engineer.md",
+      "type": "persona",
+      "status": "active"
+    },
+    "cloud_native_platform_architect": {
+      "path": "personas/cloud_native_platform_architect.md",
+      "type": "persona",
+      "status": "active"
+    },
+    "python_testing": {
+      "path": "rules/testing/python_testing.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "java_junit5_best_practices": {
+      "path": "rules/testing/java_junit5_best_practices.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "airflow_dag_patterns": {
+      "path": "rules/orchestration/airflow_dag_patterns.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "airbyte_integration": {
+      "path": "rules/orchestration/airbyte_integration.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "spring_boot_patterns": {
+      "path": "rules/framework/spring_boot_patterns.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "secrets_management_dry": {
+      "path": "rules/devops/secrets_management_dry.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "helm_wrapper_charts": {
+      "path": "rules/devops/helm_wrapper_charts.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "helm_template_helpers": {
+      "path": "rules/devops/helm_template_helpers.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "helm_packaging": {
+      "path": "rules/devops/helm_packaging.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "helm_chart_library": {
+      "path": "rules/devops/helm_chart_library.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "gke_workload_identity": {
+      "path": "rules/devops/gke_workload_identity.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "github_actions": {
+      "path": "rules/devops/github_actions.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "external_secrets_operator": {
+      "path": "rules/devops/external_secrets_operator.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "crossplane_compositions": {
+      "path": "rules/devops/crossplane_compositions.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "java_google_style_guide": {
+      "path": "rules/style-guides/java_google_style_guide.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "java_null_safety_and_optional": {
+      "path": "rules/style-guides/java_null_safety_and_optional.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "dependency_injection": {
+      "path": "rules/style-guides/dependency_injection.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "python_pep8_and_docstrings": {
+      "path": "rules/style-guides/python_pep8_and_docstrings.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "prevent_sql_injection": {
+      "path": "rules/security/prevent_sql_injection.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "java_prevent_sql_injection": {
+      "path": "rules/security/java_prevent_sql_injection.md",
+      "type": "rule",
+      "status": "active"
+    },
+    "spring_boot_integration_test": {
+      "path": "examples/testing/spring_boot_integration_test.md",
+      "type": "example",
+      "status": "active"
+    },
+    "pytest_class_based": {
+      "path": "examples/testing/pytest_class_based.md",
+      "type": "example",
+      "status": "active"
+    },
+    "mockito_service_test": {
+      "path": "examples/testing/mockito_service_test.md",
+      "type": "example",
+      "status": "active"
+    },
+    "junit5_class_based": {
+      "path": "examples/testing/junit5_class_based.md",
+      "type": "example",
+      "status": "active"
+    },
+    "mission_brief": {
+      "path": "examples/prompts/mission_brief.md",
+      "type": "example",
+      "status": "active"
+    },
+    "leveling_up": {
+      "path": "examples/prompts/leveling_up.md",
+      "type": "example",
+      "status": "active"
+    },
+    "risk_based_test": {
+      "path": "examples/prompts/risk_based_test.md",
+      "type": "example",
+      "status": "active"
+    },
+    "plan": {
+      "path": "examples/prompts/plan.md",
+      "type": "example",
+      "status": "active"
+    }
+  }
+}
