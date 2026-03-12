@@ -1,5 +1,21 @@
 # Changelog
 
+## [v1.3.0] - 2026-03-12
+
+### Added
+
+- **`.cdrs.json`** - Context Module Registry
+  - Centralized tracking of all context modules (personas, rules, examples)
+  - 34 modules pre-populated with `status` field
+  - Status values: `discovered` | `proposed` | `accepted` | `active` | `deprecated`
+  - Enables lifecycle management of context modules
+
+### Changed
+
+- **Updated `AGENTS.md`** - Added Context Module Registry documentation
+- **Updated `README.md`** - Added `.cdrs.json` to repository layout
+- **`.skills.json`** - Added `status` field to skills for lifecycle tracking
+
 ## [v1.2.0] - 2025-02-14
 
 ### Lean Starter Kit Refactor

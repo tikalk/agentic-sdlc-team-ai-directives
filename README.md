@@ -34,6 +34,7 @@ team-ai-directives/
 ├── CHANGELOG.md               # Version history
 ├── .mcp.json                  # MCP server configuration
 ├── .skills.json               # Skills registry and policy
+├── .cdrs.json                 # Context module registry and status tracking
 ├── context_modules/           # The knowledge library
 │   ├── constitution.md        # Core principles
 │   ├── personas/              # Role-specific guidance
