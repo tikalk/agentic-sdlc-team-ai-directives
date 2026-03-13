@@ -1,10 +1,27 @@
 # Changelog
 
+## [v1.4.0] - 2026-03-13
+
+### Changed
+
+- **Breaking**: Reverted CDR storage from `.cdrs.json` to markdown-based `CDR.md`
+  - CDRs now stored in `.specify/memory/cdr.md` in project directories (local)
+  - Approved CDRs copied to `{TEAM_DIRECTIVES}/CDR.md` during `/levelup.implement`
+  - Status values simplified: `Accepted` | `Rejected`
+  - `/levelup.skills` now requires CDR status = "Accepted" (not "Proposed")
+- **Removed `.cdrs.json`** - Single source of truth is now markdown-based
+- **Removed `status` field from `.skills.json`** - Skills no longer have lifecycle status
+
+### Updated Documentation
+
+- **AGENTS.md** - Updated to reference CDR.md instead of .cdrs.json
+- **README.md** - Added CDR.md to repository layout
+
 ## [v1.3.0] - 2026-03-12
 
 ### Added
 
-- **`.cdrs.json`** - Context Module Registry
+- **`.cdrs.json`** - Context Module Registry (reverted in v1.4.0)
   - Centralized tracking of all context modules (personas, rules, examples)
   - 34 modules pre-populated with `status` field
   - Status values: `discovered` | `proposed` | `accepted` | `active` | `deprecated`
@@ -15,6 +32,10 @@
 - **Updated `AGENTS.md`** - Added Context Module Registry documentation
 - **Updated `README.md`** - Added `.cdrs.json` to repository layout
 - **`.skills.json`** - Added `status` field to skills for lifecycle tracking
+
+### Note
+
+This version was superseded by v1.4.0 which reverted the CDR storage approach.
 
 ## [v1.2.0] - 2025-02-14
 

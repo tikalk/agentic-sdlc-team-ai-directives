@@ -10,7 +10,7 @@ This repository contains reusable AI agent directives.
 - `context_modules/examples/` - Code examples and prompt templates
 - `skills/` - Self-contained capabilities
 - `.skills.json` - Skills registry and policy
-- `.cdrs.json` - Context module registry and status tracking
+- `CDR.md` - Context Directive Records (approved contributions)
 
 ## Loading Order
 
@@ -18,46 +18,26 @@ This repository contains reusable AI agent directives.
 2. Relevant persona (based on task context)
 3. Skill (triggered by user request)
 
-## Context Module Registry (.cdrs.json)
+## Context Directive Records (CDR.md)
 
-All context modules (personas, rules, examples) are tracked in `.cdrs.json`:
+CDR.md tracks approved contributions to team-ai-directives from various projects.
 
-```json
-{
-  "modules": {
-    "senior_python_developer": {
-      "path": "personas/senior_python_developer.md",
-      "type": "persona",
-      "status": "active"
-    }
-  }
-}
-```
+### CDR Index
 
-### Module Types
-
-| Type | Location | Description |
-|------|----------|-------------|
-| `persona` | `context_modules/personas/` | Role-specific guidance |
-| `rule` | `context_modules/rules/` | Domain-specific patterns |
-| `example` | `context_modules/examples/` | Code examples and prompts |
+| ID | Target Module | Context Type | Status | Date | Source |
+|----|---------------|--------------|--------|------|--------|
 
 ### Status Values
 
-Each module has a `status` field for lifecycle tracking:
-
-- `discovered` - Identified but not yet proposed
-- `proposed` - Under consideration
-- `accepted` - Approved for use
-- `active` - Currently in use (default for new modules)
-- `deprecated` - No longer recommended
+| Status | Description |
+|--------|-------------|
+| **Accepted** | Approved for inclusion in team-ai-directives |
+| **Rejected** | Not accepted (reason documented in CDR) |
 
 ### Finding Context Modules
 
-1. Check `.cdrs.json` for all available modules
-2. Filter by `type` (persona, rule, example)
-3. Filter by `status` (use `active` for current modules)
-4. Load the file from the path specified
+1. Explore `context_modules/` directories directly
+2. Check `CDR.md` for approved contributions from projects
 
 ## Using Skills
 

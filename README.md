@@ -32,9 +32,9 @@ team-ai-directives/
 ├── GETTING_STARTED.md         # Quick start guide
 ├── CONTRIBUTING.md            # Contribution guidelines
 ├── CHANGELOG.md               # Version history
+├── CDR.md                     # Context Directive Records (approved contributions)
 ├── .mcp.json                  # MCP server configuration
 ├── .skills.json               # Skills registry and policy
-├── .cdrs.json                 # Context module registry and status tracking
 ├── context_modules/           # The knowledge library
 │   ├── constitution.md        # Core principles
 │   ├── personas/              # Role-specific guidance
