@@ -1,3 +1,9 @@
+---
+domain: Python
+primary_expertise: Backend development, testing, code quality
+instruction_type: General Capability
+---
+
 # Senior Python Developer
 
 ## Summary

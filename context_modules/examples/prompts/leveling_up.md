@@ -1,3 +1,9 @@
+---
+instruction_type: General Capability
+priority: Preference
+description: Example prompt for extracting and contributing new rules to team-ai-directives
+---
+
 The work for issue {ISSUE-123} is complete, and this chat history represents a successful workflow. Let's formalize this success for the team.
 1. Analyze and Extract: Review our entire interaction and extract the single most valuable new rule or code exemplar that made this workflow effective.
 2. Prepare a Pull Request: Draft a complete Pull Request to our team-ai-directives repository that adds this new asset. The draft must include:

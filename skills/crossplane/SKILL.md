@@ -1,6 +1,8 @@
 ---
 name: crossplane
 description: "Crossplane composition patterns for cloud-agnostic infrastructure as code. Use when writing Crossplane Compositions, XRDs (CompositeResourceDefinitions), or Claims, managing cloud resources declaratively from Kubernetes, or designing platform team infrastructure abstractions with Crossplane."
+instruction_type: Generation
+priority: Standard
 ---
 
 # Crossplane Skill

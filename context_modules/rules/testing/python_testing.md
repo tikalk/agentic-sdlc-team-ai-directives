@@ -1,3 +1,9 @@
+---
+instruction_type: Review
+priority: Standard
+description: Standards for writing and organizing Python tests with pytest
+---
+
 # Rule: Python Testing with Pytest
 
 ## Checklist

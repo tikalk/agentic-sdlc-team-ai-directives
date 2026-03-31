@@ -1,3 +1,9 @@
+---
+instruction_type: Generation
+priority: Standard
+description: Example of Spring Boot integration testing
+---
+
 # Example: Spring Boot Integration Test
 
 ```java

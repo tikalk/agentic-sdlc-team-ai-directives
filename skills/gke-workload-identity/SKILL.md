@@ -1,6 +1,8 @@
 ---
 name: gke-workload-identity
 description: "GKE Workload Identity configuration for keyless GCP authentication. Use when configuring GKE pods to authenticate to GCP APIs without service account key files, setting up IAM bindings between Kubernetes service accounts and GCP service accounts, or troubleshooting Workload Identity permission errors on GKE."
+instruction_type: Security
+priority: Critical
 ---
 
 # GKE Workload Identity Skill

@@ -1,3 +1,9 @@
+---
+instruction_type: Generation
+priority: Standard
+description: Example prompt for creating a Mission Brief
+---
+
 I need to create a new Mission Brief in our issue tracker for the objective: "{YOUR_OBJECTIVE}".
 - Propose a one-sentence “{Goal}”, measurable “{Success Criteria}” and define the key “{Constraints}”.
 - Using @web, research best practices for this task.

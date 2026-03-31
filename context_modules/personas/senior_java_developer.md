@@ -1,3 +1,9 @@
+---
+domain: Java
+primary_expertise: Backend development, Spring Boot, testing
+instruction_type: General Capability
+---
+
 # Senior Java Developer
 
 ## Summary

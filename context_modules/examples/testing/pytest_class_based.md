@@ -1,3 +1,9 @@
+---
+instruction_type: Generation
+priority: Standard
+description: Example of class-based pytest test structure
+---
+
 # Example: Class-Based Pytest Suite
 
 ```python

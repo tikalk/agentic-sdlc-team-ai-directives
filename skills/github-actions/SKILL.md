@@ -1,6 +1,8 @@
 ---
 name: github-actions
 description: "GitHub Actions CI/CD pipeline patterns. Use when writing or reviewing GitHub Actions workflows, setting up reusable or organization-level workflows, configuring OIDC for cloud authentication, or implementing automated build and deploy pipelines."
+instruction_type: Generation
+priority: Standard
 ---
 
 # GitHub Actions Skill

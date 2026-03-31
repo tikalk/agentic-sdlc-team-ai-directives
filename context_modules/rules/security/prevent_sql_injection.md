@@ -1,3 +1,9 @@
+---
+instruction_type: Security
+priority: Critical
+description: Standards for preventing SQL injection vulnerabilities
+---
+
 # Rule: Prevent SQL Injection
 
 ## Checklist

@@ -32,3 +32,6 @@
 
 11. **Goal-Driven Execution**
     Define success criteria. Loop until verified. Transform imperative tasks into verifiable goals with clear success metrics. For multi-step tasks, state a brief plan with what each step accomplishes and how to verify it. Strong success criteria enable autonomous looping; weak criteria require constant clarification.
+
+12. **Memory as the Harness Core**
+    Memory transforms execution into learning. Every interaction generates traces—outputs, failures, decisions—that should accumulate into knowledge. Storing experiences is not the same as learning; what matters is deciding what to keep, how to merge it with what the system already knows, and what to forget. Without memory, every execution starts from scratch. With memory, execution compounds. Design the memory layer to filter signal from noise, consolidate conflicting learnings, and make knowledge reusable across future tasks.

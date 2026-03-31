@@ -1,3 +1,9 @@
+---
+instruction_type: Generation
+priority: Standard
+description: Example of advanced Mockito service testing
+---
+
 # Example: Advanced Mockito Service Layer Test
 
 **Note**: This example demonstrates advanced Mockito patterns. For basic testing patterns, see `junit5_class_based.md`.

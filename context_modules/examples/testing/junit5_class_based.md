@@ -1,3 +1,9 @@
+---
+instruction_type: Generation
+priority: Standard
+description: Example of class-based JUnit 5 test structure
+---
+
 # Example: Class-Based JUnit 5 Test Suite
 
 ```java

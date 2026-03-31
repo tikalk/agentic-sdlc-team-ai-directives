@@ -1,3 +1,9 @@
+---
+domain: Cloud-Native Platform
+primary_expertise: Kubernetes, GitOps, Platform Engineering
+instruction_type: General Capability
+---
+
 # Persona: Cloud-Native Platform Architect
 
 ## Summary

@@ -1,6 +1,8 @@
 ---
 name: dbt-template
 description: Simple dbt workflow patterns for data transformation, testing, and project management. Use when creating dbt projects, running data pipelines, or implementing analytics engineering workflows.
+instruction_type: Generation
+priority: Standard
 ---
 
 # dbt Template

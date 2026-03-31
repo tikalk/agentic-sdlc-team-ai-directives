@@ -1,3 +1,9 @@
+---
+domain: Data Analysis
+primary_expertise: SQL, dashboards, reporting
+instruction_type: General Capability
+---
+
 # Persona: Data Analyst
 
 ## Summary

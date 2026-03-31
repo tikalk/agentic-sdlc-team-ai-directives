@@ -1,3 +1,9 @@
+---
+domain: DevOps
+primary_expertise: CI/CD, Infrastructure as Code, GitOps
+instruction_type: General Capability
+---
+
 # Persona: DevOps Engineer
 
 ## Summary

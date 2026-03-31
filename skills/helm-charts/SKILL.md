@@ -1,6 +1,8 @@
 ---
 name: helm-charts
 description: "Helm chart authoring patterns including chart libraries, wrapper charts, template helpers, and packaging standards. Use when creating or reviewing Helm charts, building chart library abstractions, packaging Kubernetes applications, or designing multi-environment Helm deployments."
+instruction_type: Generation
+priority: Standard
 ---
 
 # Helm Charts Skill

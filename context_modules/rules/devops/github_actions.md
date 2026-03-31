@@ -1,3 +1,9 @@
+---
+instruction_type: Generation
+priority: Standard
+description: Standards for creating and managing GitHub Actions workflows and reusable actions
+---
+
 # Rule: GitHub Actions Workflows and Reusable Actions
 
 ## Checklist
@@ -562,4 +568,3 @@ runs:
 Reusable workflows and composite actions enable consistency across a multi-repository architecture while allowing individual repositories to customize as needed. This pattern reduces duplication, ensures baseline quality standards, and makes it easier to roll out improvements organization-wide. By versioning workflows and actions and allowing repositories to reference specific stages, teams can balance standardization with flexibility. The GitHub Actions ecosystem supports this through `workflow_call` triggers and composite actions, enabling a scalable CI/CD strategy.
 
 OIDC authentication eliminates the security risk of long-lived credentials by using short-lived, automatically rotated tokens. This follows the Security-Shift-Left principle by integrating secure authentication patterns directly into CI/CD workflows. Combined with fine-grained IAM policies and OIDC condition keys, teams can achieve least-privilege access control while maintaining operational simplicity.
-
