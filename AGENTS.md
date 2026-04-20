@@ -2,21 +2,28 @@
 
 This repository contains reusable AI agent directives.
 
+## Installation Locations
+
+When installed as a spec-kit extension (recommended), this repo lives at:
+- `.specify/extensions/team-ai-directives/`
+
+When cloned directly, this repo lives at the project root or configured path.
+
 ## Structure
 
 - `context_modules/constitution.md` - Core principles (always load)
 - `context_modules/personas/` - Role-specific guidance
 - `context_modules/rules/` - Domain-specific patterns
-- `context_modules/examples/` - Code examples and prompt templates
+- `context_modules_examples/` - Code examples and prompt templates
 - `skills/` - Self-contained capabilities
 - `.skills.json` - Skills registry and policy
 - `CDR.md` - Context Directive Records (approved contributions)
 
 ## Loading Order
 
-1. Constitution (foundational principles)
-2. Relevant persona (based on task context)
-3. Skill (triggered by user request)
+1. Constitution (foundational principles) — from `context_modules/constitution.md`
+2. Relevant persona (based on task context) — from `context_modules/personas/`
+3. Skill (triggered by user request) — from `skills/`
 
 ## Context Directive Records (CDR.md)
 

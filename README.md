@@ -6,6 +6,37 @@ A forkable foundation for version-controlled AI agent behavior.
 
 **Quick Start:** See [GETTING_STARTED.md](GETTING_STARTED.md) for a 5-minute setup guide.
 
+## Installation
+
+This repository can be installed in two ways:
+
+### Option 1: As a Spec Kit Extension (Recommended)
+
+Install via the spec-kit CLI using the `--team-ai-directives` flag:
+
+```bash
+# Initialize project with team-ai-directives
+specify init <project> --team-ai-directives https://github.com/your-org/team-ai-directives.git
+```
+
+The directives are installed to `.specify/extensions/team-ai-directives/` and available to all AI agents via the extension system.
+
+```bash
+# Or from a specific release tag
+specify init <project> --team-ai-directives https://github.com/your-org/team-ai-directives/archive/refs/tags/v1.1.0.zip
+```
+
+### Option 2: Fork and Clone (Legacy)
+
+Fork this repository and clone it locally:
+
+```bash
+git clone https://github.com/your-org/team-ai-directives.git
+cd team-ai-directives
+```
+
+Then reference it in your project initialization or configuration.
+
 ## Who This Is For
 
 - Engineering teams wanting consistent AI agent behavior

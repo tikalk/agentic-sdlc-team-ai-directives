@@ -8,6 +8,10 @@
   - `adlc.team-ai-directives.verify` command for health checks
   - Enables spec-kit extension system integration
 
+- **Documentation**:
+  - README.md: Added installation section (extension vs clone)
+  - AGENTS.md: Added installation locations section
+
 ## [v1.4.0] - 2026-03-13
 
 ### Changed
