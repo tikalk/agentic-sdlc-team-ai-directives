@@ -1,0 +1,25 @@
+schema_version: "1.0"
+
+extension:
+  id: "team-ai-directives"
+  name: "Team AI Directives"
+  version: "1.1.0"
+  description: "Team-specific AI agent context, skills, and conventions for Spec-Driven Development"
+  author: "Team"
+  repository: "https://github.com/tikal/agentic-sdlc-team-ai-directives"
+  license: "MIT"
+
+requires:
+  speckit_version: ">=0.3.0"
+
+provides:
+  commands:
+    - name: "adlc.team-ai-directives.verify"
+      file: "commands/verify.md"
+      description: "Verify team-ai-directives installation and health check"
+      aliases: ["team-ai-directives.verify"]
+
+tags:
+  - "team-directives"
+  - "context"
+  - "skills"

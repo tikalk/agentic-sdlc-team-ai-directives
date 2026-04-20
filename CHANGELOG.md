@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.1.0] - 2026-04-20
+
+### Added
+
+- **extension.yml** - Spec-kit extension manifest
+  - `adlc.team-ai-directives.verify` command for health checks
+  - Enables spec-kit extension system integration
+
 ## [v1.4.0] - 2026-03-13
 
 ### Changed
