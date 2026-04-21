@@ -1,8 +1,5 @@
 ---
 description: Discover relevant context from team-ai-directives for current feature
-scripts:
-  sh: scripts/bash/discover-context.sh
-  ps: scripts/powershell/discover-context.ps1
 ---
 
 ## Goal
@@ -14,77 +11,78 @@ Discover relevant personas, rules, examples, and skills from team-ai-directives 
 ### Step 1: Load Feature Context
 
 Read the feature description from:
-- Environment variable: `SPECIFY_FEATURE_DESCRIPTION` (if set)
-- Context file: `{REPO_ROOT}/specs/{SPECIFY_FEATURE}/context.md`
-- Spec file: `{REPO_ROOT}/specs/{SPECIFY_FEATURE}/spec.md`
+- Environment variable: `${SPECIFY_FEATURE_DESCRIPTION}` (if set)
+- Context file: `{REPO_ROOT}/specs/${SPECIFY_FEATURE}/context.md`
+- Spec file: `{REPO_ROOT}/specs/${SPECIFY_FEATURE}/spec.md` (Mission Brief section)
 
-### Step 2: Extract Keywords
+Extract the feature's:
+- **Domain**: What business area is this? (e.g., payments, auth, analytics)
+- **Technology**: What tech stack? (e.g., Java, Python, Kubernetes, React)
+- **Patterns**: What architectural patterns? (e.g., REST, event-driven, CQRS)
+- **Actions**: What is the feature doing? (e.g., create, validate, sync, process)
 
-From the feature description, extract:
-- **Domain keywords**: Business domain terms (e.g., "payment", "authentication", "analytics")
-- **Technology keywords**: Tech stack terms (e.g., "API", "database", "frontend", "microservice")
-- **Pattern keywords**: Architectural patterns (e.g., "CQRS", "event-driven", "REST")
-- **Action keywords**: Feature actions (e.g., "create", "validate", "sync", "process")
+### Step 2: Scan team-ai-directives
 
-### Step 3: Scan team-ai-directives
+Read all files from `${SPECIFY_TEAM_DIRECTIVES}/context_modules/`:
 
-Scan these directories relative to `${SPECIFY_TEAM_DIRECTIVES}`:
+1. **constitution.md** - Always include this
+2. **personas/** - List all persona files
+3. **rules/** - List all rule files (organized by category)
+4. **examples/** - List all example files
 
-1. **constitutions/** or **constitution.md** - Always include
-2. **personas/** - Match to domain keywords
-3. **rules/** - Match to technology and pattern keywords
-4. **examples/** - Match to similar feature types
-5. **skills/** - Check `.skills.json` for relevant skills
+### Step 3: Select Relevant Context
 
-### Step 4: Score and Rank
+For each file, determine relevance based on:
 
-For each discovered item:
-- Calculate relevance score (0.0 to 1.0) based on keyword overlap
-- Include items with score >= 0.3
-- Sort by relevance (highest first)
-- Limit to top 5 per category
+**Personas** - Match when:
+- Persona's domain matches feature domain
+- Persona's role aligns with feature users
 
-### Step 5: Output
+**Rules** - Match when:
+- Rule technology matches feature technology stack
+- Rule category aligns with feature type (security, testing, style, etc.)
+- Rule applies to the patterns being used
 
-Output structured discovery results:
+**Examples** - Match when:
+- Example domain/technology overlaps with feature
+- Similar feature type or pattern demonstrated
+
+### Step 4: Output Discovered Context
+
+Output structured discovery results in this exact format:
 
 ```json
 {
   "constitution": "/path/to/constitution.md",
   "personas": [
-    {"name": "Admin User", "file": "personas/admin.md", "score": 0.85}
+    {"name": "Admin User", "file": "personas/admin.md", "relevance": "high"}
   ],
   "rules": [
-    {"name": "API Security", "file": "rules/api-security.md", "score": 0.92}
+    {"name": "API Security", "file": "rules/security/api-security.md", "relevance": "high", "category": "security"}
   ],
   "examples": [
-    {"name": "Payment Flow", "file": "examples/payment-flow.md", "score": 0.78}
-  ],
-  "skills": [
-    {"id": "speckit-adlc-security-auth", "name": "Security Auth", "required": true}
+    {"name": "Payment Flow", "file": "examples/payment-flow.md", "relevance": "medium"}
   ],
   "search_metadata": {
-    "keywords": ["payment", "api", "security"],
     "files_searched": 42,
     "files_with_matches": 8
   }
 }
 ```
 
+### Step 5: Populate Feature Context
+
+The preset commands will use this output to populate the context template with discovered directives.
+
+## Usage
+
+This command is automatically executed via extension hooks:
+- **before_specify**: Runs before `/spec.specify` to discover context for specification
+- **before_plan**: Runs before `/spec.plan` to discover context for planning
+
 ## Failure Handling
 
-If team-ai-directives is not configured:
-1. Check for `${SPECIFY_TEAM_DIRECTIVES}` environment variable
-2. Check init-options.json for `team_ai_directives` path
-3. If not found, output empty results and exit with code 0 (don't fail the operation)
-
-If discovery fails:
-- Output error to stderr
-- Exit with code 1 (will block specify/plan commands since hooks are mandatory)
-
-## Usage in Preset Commands
-
-The preset commands (`spec.specify`, `spec.plan`) will:
-1. Execute this hook before running
-2. Parse the JSON output
-3. Inject discovered context into the feature context template
+If team-ai-directives is not configured or files cannot be read:
+1. Output empty results with all arrays empty
+2. Include search_metadata showing 0 files searched
+3. Exit successfully (code 0) - don't block the preset command
