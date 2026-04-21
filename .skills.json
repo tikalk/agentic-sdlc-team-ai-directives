@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.2.0",
   "source": "team-ai-directives",
   "description": "Team skills manifest for the Skills Package Manager. Defines required, recommended, internal, and blocked skills with policy settings.",
   "skills": {

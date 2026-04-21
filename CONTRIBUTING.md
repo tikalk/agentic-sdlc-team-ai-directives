@@ -19,32 +19,30 @@ trustworthy.
    from the team-ai-directives repository to ensure you are using the team's
    most current standards.
 
-2. **Fork and Branch** – create feature branches named `feature/<slug>` or
+2. **Fork and Branch** – Create feature branches named `feature/<slug>` or
    `docs/<slug>`.
 
-3. **Add or Update Modules** – follow the directory conventions under
-   `context_modules/`. Use standardized templates from the library for common
-   tasks (e.g., reference existing examples or rules).
+3. **Add or Update Modules** – Follow the directory conventions under
+   `context_modules/`. Use standardized templates from existing examples.
 
-4. **Validate** – run linting or schema checks if provided, and ensure markdown
-   renders cleanly.
+4. **Validate** – Ensure markdown files lint cleanly and render properly.
 
-5. **Document Impact** – note which projects or workflows need to update their
+5. **Document Impact** – Note which projects or workflows need to update their
    references.
 
-6. **Open a Pull Request** – include:
+6. **Open a Pull Request** – Include:
    * Summary of changes
    * Rationale and intended benefits
-   * Any migration steps (e.g., "projects can checkout the v1.0.0 tag for old
-     structure, new projects should use latest").
+   * Any migration steps (e.g., "projects can checkout the v1.1.0 tag for old
+     structure, new projects should use v1.2.0").
 
-7. **Guild Review** – at least one member of the AI Development Guild must
+7. **Guild Review** – At least one member of the AI Development Guild must
    approve before merge.
 
 8. **Contribute Back via /levelup** – If you develop a highly effective new
    prompt or a "golden" example during your work, formalize it and submit back
-   to this repository using the /levelup process to build the team's shared
-   knowledge base.
+   to this repository using the `/levelup` workflow to build the team's shared
+   knowledge base. Use `/levelup.implement` to create a PR with your changes.
 
 ## Guidelines
 
