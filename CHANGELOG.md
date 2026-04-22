@@ -1,5 +1,28 @@
 # Changelog
 
+## [v1.3.0] - 2026-04-22
+
+### Added
+
+- **Constitution hooks** for spec-kit integration:
+  - `before_constitution` hook (optional: false) - Auto-loads team principles before project constitution update
+
+- **New command**: `adlc.team-ai-directives.constitution` - Discovers and loads team constitution principles
+
+- **extension.yml** updated:
+  - Added `before_constitution` hook
+  - Registered new `constitution` command
+
+- **verify.md** enhanced:
+  - Added Check #4: Constitution alignment verification
+
+### Changed
+
+- **Consolidated commands**:
+  - Renamed `constitution-discover.md` → `constitution.md`
+  - Merged constitution verification into `verify.md` (Check #4)
+  - Removed separate `constitution-verify` command (now part of verify)
+
 ## [v1.1.0] - 2026-04-20
 
 ### Added
