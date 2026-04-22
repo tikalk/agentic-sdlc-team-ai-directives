@@ -23,7 +23,7 @@ The directives are installed to `.specify/extensions/team-ai-directives/` and av
 
 ```bash
 # Or from a specific release tag
-specify init <project> --team-ai-directives https://github.com/your-org/team-ai-directives/archive/refs/tags/v1.2.0.zip
+specify init <project> --team-ai-directives https://github.com/your-org/team-ai-directives/archive/refs/tags/v1.3.0.zip
 ```
 
 ### Option 2: Development (Fork and Clone)
@@ -563,6 +563,34 @@ The `policy` section of `.skills.json` controls agent behavior:
 | `auto_install_required` | `true` | Required skills are automatically loaded without user prompting |
 | `enforce_blocked` | `true` | The agent refuses to use any skill in the `blocked` list |
 | `allow_project_override` | `true` | Individual projects can override manifest settings locally |
+
+---
+
+## Commands
+
+The extension provides these commands for spec-kit integration:
+
+| Command | Purpose |
+|---------|---------|
+| `adlc.team-ai-directives.verify` | Health check - verifies extension installation, skills registry, CDR tracking, and constitution alignment |
+| `adlc.team-ai-directives.discover` | Auto-discovers relevant personas, rules, and examples for the current feature |
+| `adlc.team-ai-directives.constitution` | Loads team constitution principles before project constitution update |
+
+### Hooks
+
+The extension automatically runs commands via hooks:
+
+| Hook | Command | Description |
+|------|---------|-------------|
+| `before_specify` | discover | Auto-discovers context for specification |
+| `before_plan` | discover | Auto-discovers context for planning |
+| `before_constitution` | constitution | Loads team principles before project constitution update |
+
+Run verification anytime:
+
+```bash
+specify run adlc.team-ai-directives.verify
+```
 
 ---
 

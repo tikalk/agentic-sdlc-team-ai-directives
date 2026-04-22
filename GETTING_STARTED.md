@@ -38,6 +38,22 @@ specify init <project> --team-ai-directives https://github.com/your-org/team-ai-
 
 The directives are installed to `.specify/extensions/team-ai-directives/`.
 
+### Available Commands
+
+After installation, these commands are available:
+
+| Command | Description |
+|---------|-------------|
+| `adlc.team-ai-directives.verify` | Health check - verifies extension, skills, CDR, and constitution |
+| `adlc.team-ai-directives.discover` | Auto-discovers relevant context for features |
+| `adlc.team-ai-directives.constitution` | Loads team principles before constitution update |
+
+Run verification:
+
+```bash
+specify run adlc.team-ai-directives.verify
+```
+
 ---
 
 ## 3. Create a Skill
