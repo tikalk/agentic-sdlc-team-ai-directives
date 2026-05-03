@@ -1,2 +1,5 @@
 .env
 .envrc
+
+# Session transcripts (all 29 agents in spec-kit use standardized naming)
+session-ses_*.md
