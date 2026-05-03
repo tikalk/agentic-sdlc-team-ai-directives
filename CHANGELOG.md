@@ -1,5 +1,46 @@
 # Changelog
 
+## [v1.5.0] - 2026-05-03
+
+### Added
+
+- **New constitution principle**: Immutability by Default (Principle #5)
+  - Always create new objects, never mutate shared state
+  - Prevents side effects and simplifies debugging
+
+- **New style guide rule**: File Organization and Structure
+  - File size limits: Target 200-400 lines, max 800
+  - Function limits: Target <50 lines, max 100
+  - Nesting depth: Max 4 levels
+  - Organize by feature/domain, not by type
+
+- **New security rule**: Pre-Commit Security Checklist
+  - Critical checks: No hardcoded secrets, SQL injection prevention, input validation
+  - High priority: XSS prevention, CSRF protection, authentication/authorization
+  - Medium priority: Rate limiting, error handling, dependencies
+  - References existing rules using `@rule:` syntax
+
+### Changed
+
+- **Constitution renumbering**: All principles after #4 renumbered (now 1-13)
+- Fixed indentation inconsistencies in constitution
+
+## [v1.4.0] - 2026-04-29
+
+### Added
+
+- **Consolidated rules** for improved maintainability:
+  - New `sql_injection_prevention.md` - Comprehensive SQL injection rules with universal checklist and language-specific patterns (Java, Python, Node.js)
+  - New `secrets_management.md` - Integrated secrets management combining External Secrets Operator, DRY patterns, and GKE Workload Identity
+
+### Changed
+
+- **Rule consolidation**:
+  - Removed duplicate SQL injection rules (java_prevent_sql_injection.md, prevent_sql_injection.md) → merged into sql_injection_prevention.md
+  - Removed duplicate secrets rules (external_secrets_operator.md, secrets_management_dry.md) → merged into secrets_management.md
+
+- **CDR.md updated** with consolidation records (CDR-2026-001, CDR-2026-002)
+
 ## [v1.3.0] - 2026-04-22
 
 ### Added
