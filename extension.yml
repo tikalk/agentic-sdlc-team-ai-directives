@@ -14,34 +14,34 @@ requires:
 
 provides:
   commands:
-    - name: "adlc.team-ai-directives.verify"
+    - name: "adlc.team.verify"
       file: "commands/verify.md"
       description: "Verify team-ai-directives installation and health check"
-      aliases: ["team-ai-directives.verify"]
+      aliases: ["team.verify"]
 
-    - name: "adlc.team-ai-directives.discover"
+    - name: "adlc.team.discover"
       file: "commands/discover.md"
       description: "Discover relevant context from team-ai-directives for current feature"
-      aliases: ["team-ai-directives.discover"]
+      aliases: ["team.discover"]
 
-    - name: "adlc.team-ai-directives.constitution"
+    - name: "adlc.team.constitution"
       file: "commands/constitution.md"
       description: "Discover and load team constitution principles before project constitution update"
-      aliases: ["team-ai-directives.constitution"]
+      aliases: ["team.constitution"]
 
 hooks:
   before_constitution:
-    command: adlc.team-ai-directives.constitution
+    command: adlc.team.constitution
     optional: false
     description: "Discover and inherit team constitution principles before project constitution update"
 
   before_specify:
-    command: adlc.team-ai-directives.discover
+    command: adlc.team.discover
     optional: false
     description: "Auto-discover personas, rules, and examples from team-ai-directives"
 
   before_plan:
-    command: adlc.team-ai-directives.discover
+    command: adlc.team.discover
     optional: false
     description: "Auto-discover architecture patterns and implementation guidelines"
 
