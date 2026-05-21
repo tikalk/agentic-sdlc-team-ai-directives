@@ -32,8 +32,8 @@ While persona is tool-agnostic, common tooling patterns include:
 ## Rule References
 For detailed implementation patterns, reference these specific rules:
 - **CI/CD Pipelines**: @rule:devops/github_actions.md
-- **Container Packaging**: @rule:devops/helm_chart_library.md, @devops/helm_packaging.md, @rule:devops/helm_wrapper_charts.md
-- **Secrets Management**: @rule:devops/external_secrets_operator.md, @rule:devops/secrets_management_dry.md
+- **Container Packaging**: @rule:devops/helm_chart_library.md, @rule:devops/helm_packaging.md, @rule:devops/helm_wrapper_charts.md
+- **Secrets Management**: @rule:devops/secrets_management.md
 - **Cloud Authentication**: @rule:devops/gke_workload_identity.md
 - **Infrastructure as Code**: @rule:devops/crossplane_compositions.md
 - **Testing**: @rule:testing/python_testing.md

@@ -12,7 +12,7 @@ instruction_type: General Capability
 - **Success Criteria**: Accurate visuals, automated delivery, reproducible filters.
 
 ## Rule References
-- Security (SQL Injection): @rule:security/prevent_sql_injection.md
+- Security (SQL Injection): @rule:security/sql_injection_prevention.md
 
 ## Collaboration Notes
 - Prefers asynchronous workflows—export jobs should not block interactive exploration.

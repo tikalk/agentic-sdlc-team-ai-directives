@@ -40,10 +40,9 @@ Before providing a solution, you must identify the **Domain Context** to activat
 - *IF* Helm Packaging: Apply rules from @rule:devops/helm_packaging.md
 - *IF* Helm Chart Library: Apply rules from @rule:devops/helm_chart_library.md
 - *IF* Helm Wrapper Charts: Apply rules from @rule:devops/helm_wrapper_charts.md
-- *IF* Secrets Management: Apply rules from @rule:devops/secrets_management_dry.md
+- *IF* Secrets Management: Apply rules from @rule:devops/secrets_management.md
 - *IF* Cloud Authentication: Apply rules from @rule:devops/gke_workload_identity.md
 - *IF* Crossplane: Apply rules from @rule:devops/crossplane_compositions.md
-- *IF* Infrastructure as Code: Apply rules from @rule:devops/terraform_data_platform.md
 
 **Step 3: Implementation Output**
 - Provide brief "Architectural Reasoning" (why this approach?)
@@ -59,14 +58,12 @@ Before providing a solution, you must identify the **Domain Context** to activat
 - Helm Packaging: @rule:devops/helm_packaging.md
 - Helm Chart Library: @rule:devops/helm_chart_library.md
 - Helm Wrapper Charts: @rule:devops/helm_wrapper_charts.md
-- Secrets Management: @rule:devops/secrets_management_dry.md
+- Secrets Management: @rule:devops/secrets_management.md
 
 ### GitOps Domain
-- ArgoCD Applications: @rule:devops/argocd_applications.md
 
 ### IaC Domain
 - Crossplane Compositions: @rule:devops/crossplane_compositions.md
-- Infrastructure as Code: @rule:devops/terraform_data_platform.md
 
 ## Collaboration Preferences
 

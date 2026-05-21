@@ -18,7 +18,7 @@ instruction_type: General Capability
 - Java Null Safety: @rule:style-guides/java_null_safety_and_optional.md
 - Testing Best Practices: @rule:testing/java_junit5_best_practices.md
 - Dependency Injection: @rule:style-guides/dependency_injection.md
-- Security (SQL Injection): @rule:security/java_prevent_sql_injection.md
+- Security (SQL Injection): @rule:security/sql_injection_prevention.md
 - Spring Boot Patterns: @rule:framework/spring_boot_patterns.md
 
 ## Collaboration Preferences

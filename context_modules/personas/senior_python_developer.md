@@ -15,7 +15,7 @@ instruction_type: General Capability
 ## Rule References
 - Python Style Guide: @rule:style-guides/python_pep8_and_docstrings.md
 - Testing Patterns: @rule:testing/python_testing.md
-- Security (SQL Injection): @rule:security/prevent_sql_injection.md
+- Security (SQL Injection): @rule:security/sql_injection_prevention.md
 
 ## Collaboration Preferences
 - Prefers thorough code reviews with constructive feedback
