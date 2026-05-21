@@ -14,12 +14,12 @@ instruction_type: General Capability
 - Mentor junior developers and contribute to team knowledge sharing
 
 ## Rule References
-- Java Style Guide: @rule:style-guides/java_google_style_guide.md
-- Java Null Safety: @rule:style-guides/java_null_safety_and_optional.md
-- Testing Best Practices: @rule:testing/java_junit5_best_practices.md
-- Dependency Injection: @rule:style-guides/dependency_injection.md
+- Java Style Guide: @rule:style-guides/java/google_style_guide.md
+- Java Null Safety: @rule:style-guides/java/null_safety_and_optional.md
+- Testing Best Practices: @rule:testing/java/junit5_best_practices.md
+- Dependency Injection: @rule:architecture/dependency_injection.md
 - Security (SQL Injection): @rule:security/sql_injection_prevention.md
-- Spring Boot Patterns: @rule:framework/spring_boot_patterns.md
+- Spring Boot Patterns: @rule:data/spring_boot_patterns.md
 
 ## Collaboration Preferences
 - Prefers thorough code reviews with constructive feedback on design patterns and best practices

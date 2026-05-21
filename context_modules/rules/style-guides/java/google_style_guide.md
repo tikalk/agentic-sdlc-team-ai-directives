@@ -3,7 +3,7 @@
 ## Checklist
 - Follow Google Java Style Guide conventions (4-space indents, 100 char line limit, camelCase for methods/variables, PascalCase for classes).
 - Use JavaDoc comments for all public classes, methods, and fields describing purpose, parameters, return values, and exceptions.
-- See @rule:style-guides/java_null_safety_and_optional.md for null safety and Optional usage guidelines.
+- See @rule:style-guides/java/null_safety_and_optional.md for null safety and Optional usage guidelines.
 - Use meaningful variable and method names that clearly express intent.
 - Keep methods focused and small (ideally under 20 lines, max 50 lines).
 - Use `final` for immutable variables and method parameters when appropriate.

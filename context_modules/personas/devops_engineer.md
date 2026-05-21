@@ -36,7 +36,7 @@ For detailed implementation patterns, reference these specific rules:
 - **Secrets Management**: @rule:devops/secrets_management.md
 - **Cloud Authentication**: @rule:devops/gke_workload_identity.md
 - **Infrastructure as Code**: @rule:devops/crossplane_compositions.md
-- **Testing**: @rule:testing/python_testing.md
+- **Testing**: @rule:testing/python/pytest_patterns.md
 - **Orchestration**: @rule:orchestration/airflow_dag_patterns.md, @rule:orchestration/airbyte_integration.md
 
 ## Guidance for Agents

@@ -1,5 +1,44 @@
 # Changelog
 
+## [v1.6.0] - 2026-05-21
+
+### Added
+
+- **New directory structure** for improved organization:
+  - `rules/architecture/` - Architecture patterns (moved from style-guides/)
+  - `rules/data/` - Data patterns (renamed from framework/)
+  - `rules/style-guides/java/` - Java-specific style guides
+  - `rules/style-guides/python/` - Python-specific style guides
+  - `rules/testing/java/` - Java testing patterns
+  - `rules/testing/python/` - Python testing patterns
+
+- **New placeholder rules** for future content:
+  - `architecture/domain_driven_design.md`
+  - `architecture/state_management.md`
+  - `data/collector_contract.md`
+  - `data/memory_management.md`
+  - `data/provenance.md`
+  - `security/auth_middleware.md`
+  - `style-guides/python/metaprogramming.md`
+  - `style-guides/python/pydantic_patterns.md`
+
+### Changed
+
+- **Reorganized existing rules** to match new structure:
+  - `style-guides/dependency_injection.md` → `architecture/dependency_injection.md`
+  - `framework/spring_boot_patterns.md` → `data/spring_boot_patterns.md`
+  - `style-guides/java_*.md` → `style-guides/java/*.md`
+  - `style-guides/python_*.md` → `style-guides/python/*.md`
+  - `testing/java_*.md` → `testing/java/*.md`
+  - `testing/python_*.md` → `testing/python/*.md`
+
+- **Updated all rule references** across personas and documentation
+- **Updated CDR.md** with new verification timestamps
+
+### Removed
+
+- `framework/` directory (renamed to `data/`)
+
 ## [v1.5.0] - 2026-05-03
 
 ### Added

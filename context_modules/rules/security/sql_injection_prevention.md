@@ -121,5 +121,5 @@ SQL injection remains a top OWASP risk. Following these patterns ensures every q
 
 ## References
 
-- See `@rule:framework/spring_boot_patterns.md` for Spring Data JPA patterns
-- See `@rule:style-guides/python_pep8_and_docstrings.md` for Python style
+- See `@rule:data/spring_boot_patterns.md` for Spring Data JPA patterns
+- See `@rule:style-guides/python/pep8_and_docstrings.md` for Python style

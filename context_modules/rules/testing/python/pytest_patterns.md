@@ -284,7 +284,7 @@ Well-structured tests serve as living documentation and catch regressions early.
 - **Testability**: Proper mocking isolates code under test from external dependencies
 - **TDD Benefits**: Writing tests first drives better design and fewer bugs
 
-For style guide, see @rule:style-guides/python_pep8_and_docstrings.md.
+For style guide, see @rule:style-guides/python/pep8_and_docstrings.md.
 
 ## Related Rules
-- @rule:style-guides/python_pep8_and_docstrings.md
+- @rule:style-guides/python/pep8_and_docstrings.md

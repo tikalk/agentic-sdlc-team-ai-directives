@@ -13,8 +13,8 @@ instruction_type: General Capability
 - Mentor junior developers and contribute to team knowledge sharing
 
 ## Rule References
-- Python Style Guide: @rule:style-guides/python_pep8_and_docstrings.md
-- Testing Patterns: @rule:testing/python_testing.md
+- Python Style Guide: @rule:style-guides/python/pep8_and_docstrings.md
+- Testing Patterns: @rule:testing/python/pytest_patterns.md
 - Security (SQL Injection): @rule:security/sql_injection_prevention.md
 
 ## Collaboration Preferences

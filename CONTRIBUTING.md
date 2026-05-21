@@ -59,6 +59,68 @@ trustworthy.
   successful prompts, or challenges with the team in the AI Development Guild
   forum.
 
+## Verification Workflow
+
+All directives in this repository include **memory metadata** (YAML frontmatter) to track freshness and validity over time.
+
+### Understanding Directive Freshness
+
+When you open a directive file, you'll see at the top:
+
+```yaml
+---
+verified: 2026-05-18
+age_days: 33
+---
+
+> ⚠️ **Memory Verification**
+> This directive is 33 days old. Before applying:
+> - [ ] Pattern still exists in current codebase
+> - [ ] Rule is actively followed by team
+> - [ ] No conflicting rules introduced
+```
+
+### Verification Process
+
+1. **Automated Verification** (via LevelUp):
+   ```bash
+   # Run in any project using team-ai-directives
+   /levelup.validate
+   ```
+   This scans all directives and updates `verified` timestamps for valid ones.
+
+2. **Manual Verification** (when reviewing PRs):
+   - Check that the directive still applies
+   - Verify code examples still work
+   - Confirm no conflicts with newer rules
+   - Update the `verified` date in the YAML frontmatter
+
+3. **Stale Directives** (>30 days without verification):
+   - Flagged by `/levelup.validate`
+   - Should be reviewed and either:
+     - Updated (refresh content, reset `verified` date)
+     - Deprecated (move to archive or delete)
+     - Confirmed still valid (update `verified` date only)
+
+### Updating Verification Metadata
+
+When you verify a directive, update these fields:
+
+```yaml
+---
+verified: 2026-05-18    # Set to today
+age_days: 0             # Reset to 0 (recalculated from created date)
+---
+```
+
+And append to the verification log at the bottom of the file:
+
+```markdown
+| Date | Verified By | Notes |
+|------|-------------|-------|
+| 2026-05-18 | @username | Reviewed, still valid |
+```
+
 ## Contributing Skills
 
 ### Skill Requirements

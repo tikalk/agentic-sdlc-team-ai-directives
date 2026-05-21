@@ -75,7 +75,7 @@ Optional<Customer> findByEmailAndStatus(@Param("email") String email,
 
 - Use @Param("name") for named parameters (secure, readable)
 - Never concatenate or interpolate strings in @Query (SQL injection risk)
-- See @rule:security/java_prevent_sql_injection.md for security patterns
+- See @rule:security/sql_injection_prevention.md for security patterns
 
 ## Configuration
 
@@ -242,6 +242,6 @@ Spring Boot provides a comprehensive framework for building production-ready app
 - **Flexibility**: Profiles and configuration beans enable environment-specific setups
 - **Consistency**: Standard annotations and testing patterns provide predictable structure across the codebase
 
-For testing specifics, see @rule:testing/java_junit5_best_practices.md.
-For security patterns (SQL injection), see @rule:security/java_prevent_sql_injection.md.
-For dependency injection patterns, see @rule:style-guides/dependency_injection.md.
+For testing specifics, see @rule:testing/java/junit5_best_practices.md.
+For security patterns (SQL injection), see @rule:security/sql_injection_prevention.md.
+For dependency injection patterns, see @rule:architecture/dependency_injection.md.

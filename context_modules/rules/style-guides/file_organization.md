@@ -66,7 +66,7 @@ project/
 
 ### Java
 
-See `@rule:style-guides/java_google_style_guide.md` for additional Java-specific organization patterns.
+See `@rule:style-guides/java/google_style_guide.md` for additional Java-specific organization patterns.
 
 Key points:
 - One public class per file
@@ -75,7 +75,7 @@ Key points:
 
 ### Python
 
-See `@rule:style-guides/python_pep8_and_docstrings.md` for Python-specific guidance.
+See `@rule:style-guides/python/pep8_and_docstrings.md` for Python-specific guidance.
 
 Key points:
 - Module-level functions at the top
@@ -100,5 +100,5 @@ Consider merging when:
 
 ## References
 
-- `@rule:style-guides/python_pep8_and_docstrings.md` - Python-specific style guidance
-- `@rule:style-guides/java_google_style_guide.md` - Java-specific style guidance
+- `@rule:style-guides/python/pep8_and_docstrings.md` - Python-specific style guidance
+- `@rule:style-guides/java/google_style_guide.md` - Java-specific style guidance

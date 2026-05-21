@@ -82,6 +82,57 @@ team-ai-directives/
         └── scripts/           # Automation (optional)
 ```
 
+## File Format
+
+All directives (rules, personas, examples, skills) published via LevelUp include **YAML frontmatter** for memory management:
+
+```yaml
+---
+id: rule-python-error-handling
+cdr_ref: CDR-2026-001
+created: 2026-04-15
+modified: 2026-05-18
+verified: 2026-05-18
+age_days: 33
+evidence:
+  - commit: abc123
+    file: src/error_handler.py
+---
+```
+
+### Frontmatter Fields
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| `id` | Unique identifier | `rule-python-error-handling` |
+| `cdr_ref` | Source CDR reference | `CDR-2026-001` |
+| `created` | Original publication date | `2026-04-15` |
+| `modified` | Last edit date | `2026-05-18` |
+| `verified` | Last verification date | `2026-05-18` |
+| `age_days` | Days since creation | `33` |
+| `evidence` | List of supporting commits/files | YAML list |
+
+### Freshness Warning
+
+Published directives include a verification banner:
+
+```markdown
+> ⚠️ **Memory Verification**
+> This directive is 33 days old. Before applying:
+> - [ ] Pattern still exists in current codebase
+> - [ ] Rule is actively followed by team
+> - [ ] No conflicting rules introduced
+```
+
+### Verification Workflow
+
+1. Run `/levelup.validate` in your project to scan team-ai-directives
+2. Valid directives get their `verified` timestamp updated
+3. Stale directives (>30 days) are flagged for review
+4. Update or deprecate stale directives as needed
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full verification workflow.
+
 ## How It Works
 
 1. **AI agents read `AGENTS.md`** for instructions on using this repo
@@ -158,7 +209,7 @@ Links the persona to domain-specific rule files using the `@rule:<path>` syntax.
 ## Rule References
 - CI/CD Pipelines: @rule:devops/github_actions.md
 - Secrets Management: @rule:devops/external_secrets_operator.md, @rule:devops/secrets_management_dry.md
-- Testing: @rule:testing/python_testing.md
+- Testing: @rule:testing/python/pytest_patterns.md
 ```
 
 #### `## Collaboration Preferences` (recommended)
@@ -242,12 +293,17 @@ Each built-in persona is self-contained and production-ready. Fork and adjust th
 
    ```
    context_modules/rules/
+   ├── architecture/
+   ├── data/
    ├── devops/
-   ├── framework/
    ├── orchestration/
    ├── security/
    ├── style-guides/
+   │   ├── java/
+   │   └── python/
    └── testing/
+       ├── java/
+       └── python/
    ```
 
 4. Attach the persona in your agent configuration.

@@ -98,11 +98,11 @@ grep -r -E '(password|secret|token|key|api_key)\s*=\s*["\'][^"\']{8,}["\']' --in
 
 ### Python
 
-See `@rule:style-guides/python_pep8_and_docstrings.md` for input validation patterns.
+See `@rule:style-guides/python/pep8_and_docstrings.md` for input validation patterns.
 
 ### Java
 
-See `@rule:style-guides/java_google_style_guide.md` and `@rule:java_null_safety_and_optional.md` for validation patterns.
+See `@rule:style-guides/java/google_style_guide.md` and `@rule:style-guides/java/null_safety_and_optional.md` for validation patterns.
 
 ## Quick Reference
 
@@ -119,5 +119,5 @@ See `@rule:style-guides/java_google_style_guide.md` and `@rule:java_null_safety_
 - `@rule:security/sql_injection_prevention.md` - SQL injection prevention patterns
 - `@rule:devops/secrets_management.md` - Kubernetes secrets management
 - `@rule:devops/github_actions.md` - CI/CD security with OIDC
-- `@rule:style-guides/python_pep8_and_docstrings.md` - Python validation
-- `@rule:style-guides/java_google_style_guide.md` - Java validation
+- `@rule:style-guides/python/pep8_and_docstrings.md` - Python validation
+- `@rule:style-guides/java/google_style_guide.md` - Java validation

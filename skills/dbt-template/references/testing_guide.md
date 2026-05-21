@@ -1,6 +1,6 @@
 # Testing Guidelines Reference
 
-See @rule:testing/java_junit5_best_practices.md for testing best practices.
+See @rule:testing/java/junit5_best_practices.md for testing best practices.
 
 ## Data Quality Testing for dbt Projects
 

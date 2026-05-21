@@ -2,12 +2,16 @@
 
 Context Directive Records (CDRs) track approved contributions to team-ai-directives from various projects. CDRs document patterns, practices, and knowledge extracted from real-world implementations.
 
+> **Memory Engineering**: This index tracks directive freshness. Run `/levelup.validate` to update verification timestamps.
+
 ## CDR Index
 
-| ID | Target Module | Context Type | Status | Date | Source |
-|----|---------------|--------------|--------|------|--------|
-| CDR-2026-001 | context_modules/rules/security/sql_injection_prevention.md | Rule | Accepted | 2026-04-29 | agentic-sdlc/levelup.validate |
-| CDR-2026-002 | context_modules/rules/devops/secrets_management.md | Rule | Accepted | 2026-04-29 | agentic-sdlc/levelup.validate |
+| ID | Target Module | Type | Status | Created | Verified | Age |
+|----|---------------|------|--------|---------|----------|-----|
+| CDR-2026-001 | context_modules/rules/security/sql_injection_prevention.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d |
+| CDR-2026-002 | context_modules/rules/devops/secrets_management.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d |
+
+**Stats**: 2 CDRs | Last Updated: 2026-05-21
 
 ---
 
@@ -29,7 +33,7 @@ Context Directive Records (CDRs) track approved contributions to team-ai-directi
 
 ## CDR Format
 
-Each CDR follows this structure:
+Each CDR follows this structure with memory tracking:
 
 ```markdown
 ## CDR-{ID}: {Title}
@@ -38,9 +42,12 @@ Each CDR follows this structure:
 
 **Accepted** | Rejected
 
-### Date
+### Dates
 
-YYYY-MM-DD
+- **Created**: YYYY-MM-DD (from evidence date)
+- **Modified**: YYYY-MM-DD (publication date)
+- **Verified**: YYYY-MM-DD (last verification)
+- **Age**: N days
 
 ### Source
 
@@ -53,6 +60,10 @@ YYYY-MM-DD
 ### Context Type
 
 Rule | Persona | Example | Constitution Amendment
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
 
 ### Context
 
@@ -67,6 +78,15 @@ State what context module will be added or modified.
 Links to code, commits, or discussions that support this CDR.
 ```
 
+### Memory Tracking Fields
+
+| Field | Description |
+|-------|-------------|
+| **Created** | Date directive was first published (from oldest evidence) |
+| **Modified** | Date of last edit to the directive |
+| **Verified** | Date of last verification (run `/levelup.validate`) |
+| **Age** | Days since creation (computed from Created date) |
+
 ---
 
 ## CDR-2026-001: Consolidate SQL Injection Prevention Rules
@@ -75,9 +95,12 @@ Links to code, commits, or discussions that support this CDR.
 
 **Accepted**
 
-### Date
+### Dates
 
-2026-04-29
+- **Created**: 2026-04-29
+- **Modified**: 2026-04-29
+- **Verified**: 2026-05-21
+- **Age**: 22d
 
 ### Source
 
@@ -90,6 +113,10 @@ agentic-sdlc/levelup.validate
 ### Context Type
 
 Rule
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
 
 ### Context
 
@@ -124,9 +151,12 @@ New file created:
 
 **Accepted**
 
-### Date
+### Dates
 
-2026-04-29
+- **Created**: 2026-04-29
+- **Modified**: 2026-04-29
+- **Verified**: 2026-05-21
+- **Age**: 22d
 
 ### Source
 
@@ -139,6 +169,10 @@ agentic-sdlc/levelup.validate
 ### Context Type
 
 Rule
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
 
 ### Context
 
