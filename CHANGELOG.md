@@ -1,5 +1,19 @@
 # Changelog
 
+## [v1.6.1] - 2026-05-21
+
+### Changed
+
+- **CDR.md Re-indexing**: Complete inventory of all repository modules
+  - Removed 8 placeholder files (domain_driven_design, state_management, collector_contract, memory_management, provenance, auth_middleware, metaprogramming, pydantic_patterns)
+  - Added 25 full CDR entries (CDR-2026-003 through CDR-2026-027)
+  - All 5 personas now documented with CDR entries
+  - All 20 rules now documented with CDR entries
+  - All entries marked as "Accepted" with file creation dates from git history
+  - Updated verification timestamps to 2026-05-21
+
+**Total CDRs**: 27 (2 original consolidations + 25 initial content modules)
+
 ## [v1.6.0] - 2026-05-21
 
 ### Added
