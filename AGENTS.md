@@ -70,3 +70,7 @@ Rules are in `context_modules/rules/{domain}/`. Access them via:
 ## External Skills
 
 `.skills.json` registry section lists external skills. Fetch via URL when needed.
+
+## Contributing
+
+For contribution guidelines and release process, see [CONTRIBUTING.md](CONTRIBUTING.md).

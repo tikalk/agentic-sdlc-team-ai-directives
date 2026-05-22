@@ -1,5 +1,50 @@
 # Changelog
 
+## [v1.7.0] - 2026-05-22
+
+### Added
+
+- **New `release` command** (`adlc.team-ai-directives.release` / `team.release`)
+  - Validates and auto-corrects release readiness
+  - Checks version sync between `extension.yml` and `catalog.json`
+  - Validates repository URL (correct org: `tikalk`)
+  - Refreshes stale timestamps in `catalog.json`
+  - Detects forks and validates version format
+  - Checks if git tag already exists
+  - Auto-corrects issues by default, use `RELEASE_DRY_RUN=true` to validate only
+
+- **Version consistency check in `verify` command**
+  - Added Check 5: Version consistency (warning only)
+  - Detects version mismatch between `extension.yml` and `catalog.json`
+  - Non-blocking warning that suggests running `release` command
+
+- **Fork versioning guidelines**
+  - Format: `{upstream_version}+{fork_name}{fork_release_number}`
+  - Examples: `1.7.0+acme1`, `1.7.0+tikal2`
+  - Documented fork workflow and upstream merge process
+
+### Changed
+
+- **CONTRIBUTING.md**: Added comprehensive release process documentation
+  - Validation checks table with auto-correct indicators
+  - Dry run mode instructions
+  - Exit codes
+  - Output examples
+  - Fork versioning guidelines
+
+- **AGENTS.md**: Added "Contributing" section referencing CONTRIBUTING.md
+
+- **extension.yml**: Updated repository URL from `tikal` to `tikalk` (correct org)
+
+- **extensions/catalog.json**: 
+  - Updated version to 1.7.0
+  - Updated `provides.commands` from 3 to 4
+  - Updated `updated_at` timestamp
+
+### Fixed
+
+- Repository URL inconsistency: `extension.yml` now uses correct org `tikalk` (was `tikal`)
+
 ## [v1.6.1] - 2026-05-21
 
 ### Changed

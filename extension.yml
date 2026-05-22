@@ -3,10 +3,10 @@ schema_version: "1.0"
 extension:
   id: "team-ai-directives"
   name: "Team AI Directives"
-  version: "1.5.0"
+  version: "1.7.0"
   description: "Team-specific AI agent context, skills, and conventions for Spec-Driven Development"
   author: "Team"
-  repository: "https://github.com/tikal/agentic-sdlc-team-ai-directives"
+  repository: "https://github.com/tikalk/agentic-sdlc-team-ai-directives"
   license: "MIT"
 
 requires:
@@ -28,6 +28,11 @@ provides:
       file: "commands/constitution.md"
       description: "Discover and load team constitution principles before project constitution update"
       aliases: ["team.constitution"]
+
+    - name: "adlc.team-ai-directives.release"
+      file: "commands/release.md"
+      description: "Validate and auto-correct release readiness"
+      aliases: ["team.release"]
 
 hooks:
   before_constitution:
