@@ -1,5 +1,18 @@
 # Changelog
 
+## [v1.7.1] - 2026-05-22
+
+### Fixed
+
+- **Release command**: Repository URL check now uses git remote instead of hardcoded `tikalk`
+  - Works correctly for both upstream and fork repositories
+  - Auto-corrects both `extension.yml` and `catalog.json` to match git remote
+  - No longer incorrectly "fixes" fork repository URLs
+
+### Changed
+
+- **CONTRIBUTING.md**: Updated validation table to reflect repository URL consistency check
+
 ## [v1.7.0] - 2026-05-22
 
 ### Added

@@ -261,7 +261,7 @@ This command performs these checks and auto-corrects issues:
 | Check | Auto-Correct | Description |
 |-------|--------------|-------------|
 | Version Sync | ✅ | `extension.yml` ↔ `catalog.json` version match |
-| Repository URL | ✅ | Correct org (`tikalk`, not `tikal`) |
+| Repository URL | ✅ | Consistent with git remote (works for upstream & forks) |
 | Timestamp | ✅ | `catalog.json` `updated_at` is current |
 | Fork Detection | ℹ️ | Detect fork and validate version format |
 | Git Tag | ℹ️ | Check if tag already exists |
@@ -270,7 +270,7 @@ This command performs these checks and auto-corrects issues:
 
 By default, the command auto-corrects issues:
 - Updates `catalog.json` version to match `extension.yml`
-- Fixes repository URL (tikal → tikalk)
+- Updates repository URLs in both `extension.yml` and `catalog.json` to match git remote
 - Refreshes timestamp to current ISO 8601
 
 To validate without making changes:

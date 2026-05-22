@@ -16,13 +16,19 @@ Ensure all version information is synchronized and ready for release. Auto-corre
    - **Auto-correct**: Update `catalog.json` to match `extension.yml`
    - Report: `[FIXED] Version sync: catalog.json updated to X.X.X`
 
-### Check 2: Repository URL
+### Check 2: Repository URL Consistency
 
 1. Read `extension.yml` → extract `extension.repository`
-2. Check if URL contains correct org (`tikalk`)
-3. If incorrect (`tikal`):
-   - **Auto-correct**: Update to `https://github.com/tikalk/...`
-   - Report: `[FIXED] Repository URL: tikal → tikalk`
+2. Read `extensions/catalog.json` → extract `extensions.*.repository`
+3. Get git remote origin URL → extract actual org name
+4. Compare repository org with git remote org:
+   - **If match**: 
+     - Report: `[OK] Repository URL: {org} (consistent with git remote)`
+   - **If mismatch**:
+     - **Auto-correct**: Update both `extension.yml` and `catalog.json` to match git remote
+     - Report: `[FIXED] Repository URL updated to match git remote: {org}`
+
+This approach works for both upstream and fork repositories without hardcoding org names.
 
 ### Check 3: Timestamp Freshness
 
@@ -60,7 +66,7 @@ Version: X.X.X
 Repository: tikalk/agentic-sdlc-team-ai-directives
 
 [FIXED] Version sync: catalog.json updated to X.X.X
-[OK] Repository URL: tikalk (correct)
+[OK] Repository URL: tikalk (consistent with git remote)
 [FIXED] Timestamp updated to 2026-05-22T00:00:00Z
 [OK] Tag vX.X.X does not exist (ready to create)
 
@@ -88,7 +94,7 @@ Repository: acme/agentic-sdlc-team-ai-directives
 Upstream: tikalk/agentic-sdlc-team-ai-directives
 
 [OK] Fork version format: 1.6.1 + acme1
-[OK] Repository URL: acme (fork)
+[OK] Repository URL: acme (consistent with git remote)
 [FIXED] Timestamp updated to 2026-05-22T00:00:00Z
 [OK] Tag v1.6.1+acme1 does not exist
 
