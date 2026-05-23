@@ -1,3 +1,13 @@
+---
+id: rule-rules-orchestration-airbyte_integration
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Generic Airbyte Integration Patterns
 
 **Rule Overview**: Generic Airbyte integration patterns for triggering data syncs, managing connections, and orchestrating data pipelines via Airflow.

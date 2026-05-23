@@ -1,3 +1,13 @@
+---
+id: rule-rules-testing-java-junit5_best_practices
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Rule: JUnit 5 Testing Best Practices
 
 ## Checklist

@@ -1,3 +1,13 @@
+---
+id: rule-rules-devops-gke_workload_identity
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # GKE Workload Identity
 
 **Rule Overview**: Using Google Kubernetes Workload Identity for secure GCP authentication without long-lived service account keys in data platform workloads.

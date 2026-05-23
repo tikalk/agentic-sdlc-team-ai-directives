@@ -1,3 +1,13 @@
+---
+id: rule-rules-devops-helm_template_helpers
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Helm Template Helpers
 
 **Rule Overview**: Helm template helper functions for consistent naming, label generation, and reusable template logic.

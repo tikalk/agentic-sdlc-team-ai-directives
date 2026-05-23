@@ -1,3 +1,13 @@
+---
+id: rule-rules-devops-crossplane_compositions
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Rule: Generic Crossplane Compositions
 
 ## Checklist

@@ -1,5 +1,33 @@
 # Changelog
 
+## [v1.7.2] - 2026-05-23
+
+### Fixed
+
+- **AGENTS.md**: Repaired missing sections (`## Functional Categories (Rules)` and `## CDR.md`)
+- **Context modules**: Added YAML frontmatter to 17 orphan files:
+  - `rules/style-guides/java/google_style_guide.md`
+  - `rules/style-guides/java/null_safety_and_optional.md`
+  - `rules/style-guides/python/pep8_and_docstrings.md`
+  - `rules/testing/java/junit5_best_practices.md`
+  - `rules/devops/crossplane_compositions.md`
+  - `rules/devops/gke_workload_identity.md`
+  - `rules/devops/helm_chart_library.md`
+  - `rules/devops/helm_packaging.md`
+  - `rules/devops/helm_template_helpers.md`
+  - `rules/devops/helm_wrapper_charts.md`
+  - `rules/devops/secrets_management.md`
+  - `rules/orchestration/airbyte_integration.md`
+  - `rules/orchestration/airflow_dag_patterns.md`
+  - `rules/architecture/dependency_injection.md`
+  - `rules/data/spring_boot_patterns.md`
+  - `examples/prompts/plan.md`
+  - `examples/prompts/risk_based_test.md`
+
+### Changed
+
+- **Memory Verification**: Updated verification timestamps (2026-05-23) and reset age_days to 0 for all 33 context modules
+
 ## [v1.7.1] - 2026-05-22
 
 ### Fixed

@@ -1,3 +1,13 @@
+---
+id: rule-rules-orchestration-airflow_dag_patterns
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Generic Airflow DAG Patterns
 
 **Rule Overview**: Standard patterns for Airflow DAG development including DAG structure, imports, registration, and KubernetesPodOperator usage.

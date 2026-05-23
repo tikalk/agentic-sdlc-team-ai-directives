@@ -1,3 +1,13 @@
+---
+id: rule-rules-devops-helm_packaging
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Rule: Helm Chart Packaging and Values Design
 
 ## Checklist

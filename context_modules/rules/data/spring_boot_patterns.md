@@ -1,3 +1,13 @@
+---
+id: rule-rules-data-spring_boot_patterns
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-05-23
+verified: 2026-05-23
+age_days: 0
+evidence: []
+---
+
 # Rule: Spring Boot Application Patterns
 
 ## Checklist
