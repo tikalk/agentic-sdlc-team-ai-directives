@@ -8,7 +8,15 @@ Discover relevant personas, rules, examples, and skills from team-ai-directives 
 
 ## Discovery Process
 
-### Step 1: Load Feature Context
+### Step 1: Locate Extension Root
+
+Read `.specify/extensions/.registry` (JSON) and find the `team-ai-directives` entry.
+
+- If `source` is `"reference"`: use the `path` field as the extension root.
+- If `source` is `"local"` or `"bundled"`: use `.specify/extensions/team-ai-directives` as the extension root.
+- If not found: output empty results and exit.
+
+### Step 2: Load Feature Context
 
 Read the feature description from:
 - Environment variable: `${SPECIFY_FEATURE_DESCRIPTION}` (if set)
@@ -21,16 +29,16 @@ Extract the feature's:
 - **Patterns**: What architectural patterns? (e.g., REST, event-driven, CQRS)
 - **Actions**: What is the feature doing? (e.g., create, validate, sync, process)
 
-### Step 2: Scan team-ai-directives
+### Step 3: Scan team-ai-directives
 
-Read all files from `${SPECIFY_TEAM_DIRECTIVES}/context_modules/`:
+Read all files from `{EXTENSION_ROOT}/context_modules/`:
 
 1. **constitution.md** - Always include this
 2. **personas/** - List all persona files
 3. **rules/** - List all rule files (organized by category)
 4. **examples/** - List all example files
 
-### Step 3: Select Relevant Context
+### Step 4: Select Relevant Context
 
 For each file, determine relevance based on:
 
@@ -47,7 +55,7 @@ For each file, determine relevance based on:
 - Example domain/technology overlaps with feature
 - Similar feature type or pattern demonstrated
 
-### Step 4: Output Discovered Context
+### Step 5: Output Discovered Context
 
 Output structured discovery results in this exact format:
 
@@ -70,7 +78,7 @@ Output structured discovery results in this exact format:
 }
 ```
 
-### Step 5: Populate Feature Context
+### Step 6: Populate Feature Context
 
 The preset commands will use this output to populate the context template with discovered directives.
 

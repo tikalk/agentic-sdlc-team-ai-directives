@@ -1,5 +1,23 @@
 # Changelog
 
+## [v1.7.4] - 2026-05-28
+
+### Fixed
+
+- **Command files renamed** to align with architect extension naming convention:
+  - `commands/adlc.team-ai-directives.constitution.md` → `commands/constitution.md`
+  - `commands/adlc.team-ai-directives.discover.md` → `commands/discover.md`
+  - `commands/adlc.team-ai-directives.verify.md` → `commands/verify.md`
+  - `commands/adlc.team-ai-directives.release.md` → `commands/release.md`
+- **`constitution.md`**: Now dynamically reads principles from `context_modules/constitution.md` instead of hardcoding 12 stale principles. Removed hardcoded version `1.3.0`.
+- **`discover.md`**: Replaced non-existent `${SPECIFY_TEAM_DIRECTIVES}` env var with registry-based extension root resolution via `.specify/extensions/.registry`.
+- **`verify.md`**: Removed hardcoded principle count (was 12, now dynamically checks alignment by comparing project constitution against team principles).
+
+### Changed
+
+- **`extension.yml`**: Updated `provides.commands[].file` fields to short names. Bumped version to `1.7.4`.
+- **`extensions/catalog.json`**: Updated version and timestamp.
+
 ## [v1.7.2] - 2026-05-23
 
 ### Fixed
