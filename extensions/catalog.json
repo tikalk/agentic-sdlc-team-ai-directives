@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-05-23T00:00:00Z",
-  "catalog_url": "https://raw.githubusercontent.com/tikalk/agentic-sdlc-team-ai-directives/main/extensions/catalog.json",
-  "extensions": {
-    "team-ai-directives": {
-      "id": "team-ai-directives",
-      "name": "Team AI Directives",
-      "version": "1.7.2",
+"updated_at": "2026-05-28T00:00:00Z",
+      "catalog_url": "https://raw.githubusercontent.com/tikalk/agentic-sdlc-team-ai-directives/main/extensions/catalog.json",
+      "extensions": {
+        "team-ai-directives": {
+          "id": "team-ai-directives",
+          "name": "Team AI Directives",
+          "version": "1.7.3",
       "description": "Team-specific AI agent context, skills, and conventions for Spec-Driven Development",
       "download_url": "https://github.com/tikalk/agentic-sdlc-team-ai-directives/archive/refs/tags/{{VERSION}}.zip",
       "repository": "https://github.com/tikalk/agentic-sdlc-team-ai-directives",
