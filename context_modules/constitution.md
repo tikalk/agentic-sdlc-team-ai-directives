@@ -1,3 +1,18 @@
+---
+type: Constitution
+title: Team Constitution
+description: Core principles governing all AI agent behavior and team interactions
+tags: [governance, principles, constitution]
+timestamp: 2026-06-14T00:00:00Z
+id: constitution
+cdr_ref: null
+created: 2026-01-04
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 161
+evidence: []
+---
+
 # Team Constitution
 
 1. **Human Oversight Is Mandatory**

@@ -1,7 +1,16 @@
 ---
-domain: Python
-primary_expertise: Backend development, testing, code quality
-instruction_type: General Capability
+type: Persona
+title: Senior Python Developer
+description: Python, data/ML, testing specialist
+tags: [python, backend, testing, data, ml]
+timestamp: 2026-06-14T00:00:00Z
+id: persona-senior-python-developer
+cdr_ref: CDR-2026-007
+created: 2026-01-04
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 137
+evidence: []
 ---
 
 # Senior Python Developer

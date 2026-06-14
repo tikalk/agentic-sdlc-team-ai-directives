@@ -1,7 +1,16 @@
 ---
-domain: Cloud-Native Platform
-primary_expertise: Kubernetes, GitOps, Platform Engineering
-instruction_type: General Capability
+type: Persona
+title: Cloud-Native Platform Architect
+description: Kubernetes, GitOps, platform engineering specialist
+tags: [cloud-native, kubernetes, gitops, platform-engineering, infrastructure]
+timestamp: 2026-06-14T00:00:00Z
+id: persona-cloud-native-platform-architect
+cdr_ref: CDR-2026-003
+created: 2026-01-16
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 125
+evidence: []
 ---
 
 # Persona: Cloud-Native Platform Architect

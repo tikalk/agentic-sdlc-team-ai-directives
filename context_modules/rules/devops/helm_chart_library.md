@@ -1,10 +1,15 @@
 ---
+type: Rule
+title: Helm Chart Library Pattern
+description: Reusable Helm chart library patterns for DRY Kubernetes resource generation
+tags: [devops, helm, kubernetes, library, dry]
+timestamp: 2026-06-14T00:00:00Z
 id: rule-rules-devops-helm_chart_library
 cdr_ref: null
 created: 2026-05-23
-modified: 2026-05-23
+modified: 2026-06-14
 verified: 2026-05-23
-age_days: 0
+age_days: 22
 evidence: []
 ---
 

@@ -1,7 +1,16 @@
 ---
-instruction_type: Generation
-priority: Standard
-description: Example prompt for creating a Mission Brief
+type: Example
+title: Mission Brief Creation Prompt
+description: Prompt template for creating a Mission Brief with goal, success criteria, and constraints
+tags: [prompt, mission-brief, planning, specification]
+timestamp: 2026-06-14T00:00:00Z
+id: example-examples-prompts-mission_brief
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-06-14
+verified: 2026-05-23
+age_days: 22
+evidence: []
 ---
 
 I need to create a new Mission Brief in our issue tracker for the objective: "{YOUR_OBJECTIVE}".

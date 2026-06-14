@@ -1,7 +1,16 @@
 ---
-instruction_type: Style Guide
-priority: High
+type: Rule
+title: File Organization and Structure
 description: Standards for file organization, sizing, and code structure across all languages
+tags: [style-guide, file-organization, code-structure, maintainability]
+timestamp: 2026-06-14T00:00:00Z
+id: rule-rules-style-guides-file_organization
+cdr_ref: CDR-2026-022
+created: 2026-05-03
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 42
+evidence: []
 ---
 
 # Rule: File Organization and Structure

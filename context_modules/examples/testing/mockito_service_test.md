@@ -1,7 +1,16 @@
 ---
-instruction_type: Generation
-priority: Standard
-description: Example of advanced Mockito service testing
+type: Example
+title: Advanced Mockito Service Layer Test
+description: Example of advanced Mockito service testing with argument captors and nested assertions
+tags: [java, testing, mockito, service-test, example]
+timestamp: 2026-06-14T00:00:00Z
+id: example-examples-testing-mockito_service_test
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-06-14
+verified: 2026-05-23
+age_days: 22
+evidence: []
 ---
 
 # Example: Advanced Mockito Service Layer Test

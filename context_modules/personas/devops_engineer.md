@@ -1,7 +1,16 @@
 ---
-domain: DevOps
-primary_expertise: CI/CD, Infrastructure as Code, GitOps
-instruction_type: General Capability
+type: Persona
+title: DevOps Engineer
+description: CI/CD, Infrastructure as Code, GitOps specialist
+tags: [devops, cicd, gitops, infrastructure, automation]
+timestamp: 2026-06-14T00:00:00Z
+id: persona-devops-engineer
+cdr_ref: CDR-2026-005
+created: 2026-01-16
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 125
+evidence: []
 ---
 
 # Persona: DevOps Engineer

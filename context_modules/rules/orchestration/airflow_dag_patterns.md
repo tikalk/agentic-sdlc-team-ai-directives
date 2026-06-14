@@ -1,10 +1,15 @@
 ---
+type: Rule
+title: Airflow DAG Patterns
+description: Standard patterns for Airflow DAG development including structure, imports, registration, and KubernetesPodOperator usage
+tags: [orchestration, airflow, dag, data-engineering, kubernetes]
+timestamp: 2026-06-14T00:00:00Z
 id: rule-rules-orchestration-airflow_dag_patterns
 cdr_ref: null
 created: 2026-05-23
-modified: 2026-05-23
+modified: 2026-06-14
 verified: 2026-05-23
-age_days: 0
+age_days: 22
 evidence: []
 ---
 

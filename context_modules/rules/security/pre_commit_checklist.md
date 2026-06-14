@@ -1,7 +1,16 @@
 ---
-instruction_type: Security
-priority: Critical
+type: Rule
+title: Pre-Commit Security Checklist
 description: Pre-commit security checklist to verify before submitting code
+tags: [security, pre-commit, checklist, code-review]
+timestamp: 2026-06-14T00:00:00Z
+id: rule-rules-security-pre_commit_checklist
+cdr_ref: CDR-2026-020
+created: 2026-05-03
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 42
+evidence: []
 ---
 
 # Rule: Pre-Commit Security Checklist

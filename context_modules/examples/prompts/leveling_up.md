@@ -1,7 +1,16 @@
 ---
-instruction_type: General Capability
-priority: Preference
-description: Example prompt for extracting and contributing new rules to team-ai-directives
+type: Example
+title: LevelUp Contribution Prompt
+description: Prompt template for extracting successful workflow patterns and contributing them to team-ai-directives
+tags: [prompt, levelup, contribution, team-ai-directives]
+timestamp: 2026-06-14T00:00:00Z
+id: example-examples-prompts-leveling_up
+cdr_ref: null
+created: 2026-05-23
+modified: 2026-06-14
+verified: 2026-05-23
+age_days: 22
+evidence: []
 ---
 
 The work for issue {ISSUE-123} is complete, and this chat history represents a successful workflow. Let's formalize this success for the team.

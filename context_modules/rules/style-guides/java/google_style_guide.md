@@ -1,10 +1,15 @@
 ---
+type: Rule
+title: Java Google Style Guide
+description: Google Java Style Guide conventions
+tags: [java, style-guide, google-style, formatting]
+timestamp: 2026-06-14T00:00:00Z
 id: rule-rules-style-guides-java-google_style_guide
 cdr_ref: null
 created: 2026-05-23
-modified: 2026-05-23
+modified: 2026-06-14
 verified: 2026-05-23
-age_days: 0
+age_days: 22
 evidence: []
 ---
 

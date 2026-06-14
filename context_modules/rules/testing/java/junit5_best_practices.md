@@ -1,10 +1,15 @@
 ---
+type: Rule
+title: JUnit 5 Testing Best Practices
+description: JUnit 5 testing best practices for Java with nested classes, display names, and AAA pattern
+tags: [java, testing, junit5, best-practices]
+timestamp: 2026-06-14T00:00:00Z
 id: rule-rules-testing-java-junit5_best_practices
 cdr_ref: null
 created: 2026-05-23
-modified: 2026-05-23
+modified: 2026-06-14
 verified: 2026-05-23
-age_days: 0
+age_days: 22
 evidence: []
 ---
 

@@ -6,35 +6,35 @@ Context Directive Records (CDRs) track approved contributions to team-ai-directi
 
 ## CDR Index
 
-| ID | Target Module | Type | Status | Created | Verified | Age |
-|----|---------------|------|--------|---------|----------|-----|
-| CDR-2026-001 | context_modules/rules/security/sql_injection_prevention.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d |
-| CDR-2026-002 | context_modules/rules/devops/secrets_management.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d |
-| CDR-2026-003 | context_modules/personas/cloud_native_platform_architect.md | Persona | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-004 | context_modules/personas/data_analyst.md | Persona | Accepted | 2026-01-04 | 2026-05-21 | 137d |
-| CDR-2026-005 | context_modules/personas/devops_engineer.md | Persona | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-006 | context_modules/personas/senior_java_developer.md | Persona | Accepted | 2026-01-04 | 2026-05-21 | 137d |
-| CDR-2026-007 | context_modules/personas/senior_python_developer.md | Persona | Accepted | 2026-01-04 | 2026-05-21 | 137d |
-| CDR-2026-008 | context_modules/rules/architecture/dependency_injection.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
-| CDR-2026-009 | context_modules/rules/data/spring_boot_patterns.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
-| CDR-2026-010 | context_modules/rules/devops/crossplane_compositions.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-011 | context_modules/rules/devops/github_actions.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-012 | context_modules/rules/devops/gke_workload_identity.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-013 | context_modules/rules/devops/helm_chart_library.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-014 | context_modules/rules/devops/helm_packaging.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-015 | context_modules/rules/devops/helm_template_helpers.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-016 | context_modules/rules/devops/helm_wrapper_charts.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-017 | context_modules/rules/devops/secrets_management.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d |
-| CDR-2026-018 | context_modules/rules/orchestration/airbyte_integration.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-019 | context_modules/rules/orchestration/airflow_dag_patterns.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d |
-| CDR-2026-020 | context_modules/rules/security/pre_commit_checklist.md | Rule | Accepted | 2026-05-03 | 2026-05-21 | 18d |
-| CDR-2026-021 | context_modules/rules/security/sql_injection_prevention.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d |
-| CDR-2026-022 | context_modules/rules/style-guides/file_organization.md | Rule | Accepted | 2026-05-03 | 2026-05-21 | 18d |
-| CDR-2026-023 | context_modules/rules/style-guides/java/google_style_guide.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
-| CDR-2026-024 | context_modules/rules/style-guides/java/null_safety_and_optional.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
-| CDR-2026-025 | context_modules/rules/style-guides/python/pep8_and_docstrings.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
-| CDR-2026-026 | context_modules/rules/testing/java/junit5_best_practices.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
-| CDR-2026-027 | context_modules/rules/testing/python/pytest_patterns.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d |
+| ID | Target Module | Type | Status | Created | Verified | Age | Descriptor |
+|----|---------------|------|--------|---------|----------|-----|------------|
+| CDR-2026-001 | context_modules/rules/security/sql_injection_prevention.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d | SQL injection prevention patterns for all languages |
+| CDR-2026-002 | context_modules/rules/devops/secrets_management.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d | Consolidated secrets management with ESO and DRY patterns |
+| CDR-2026-003 | context_modules/personas/cloud_native_platform_architect.md | Persona | Accepted | 2026-01-16 | 2026-05-21 | 125d | Cloud-native platform architecture and infrastructure persona |
+| CDR-2026-004 | context_modules/personas/data_analyst.md | Persona | Accepted | 2026-01-04 | 2026-05-21 | 137d | Data analysis and reporting persona |
+| CDR-2026-005 | context_modules/personas/devops_engineer.md | Persona | Accepted | 2026-01-16 | 2026-05-21 | 125d | DevOps and CI/CD pipeline engineering persona |
+| CDR-2026-006 | context_modules/personas/senior_java_developer.md | Persona | Accepted | 2026-01-04 | 2026-05-21 | 137d | Senior Java developer persona with enterprise patterns |
+| CDR-2026-007 | context_modules/personas/senior_python_developer.md | Persona | Accepted | 2026-01-04 | 2026-05-21 | 137d | Senior Python developer persona with data/ML patterns |
+| CDR-2026-008 | context_modules/rules/architecture/dependency_injection.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | Dependency injection patterns for maintainable code |
+| CDR-2026-009 | context_modules/rules/data/spring_boot_patterns.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | Spring Boot data layer patterns and conventions |
+| CDR-2026-010 | context_modules/rules/devops/crossplane_compositions.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Crossplane Composition and XRD patterns for cloud infrastructure |
+| CDR-2026-011 | context_modules/rules/devops/github_actions.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | GitHub Actions CI/CD pipeline patterns and reusable workflows |
+| CDR-2026-012 | context_modules/rules/devops/gke_workload_identity.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | GKE Workload Identity for keyless GCP authentication |
+| CDR-2026-013 | context_modules/rules/devops/helm_chart_library.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Helm chart library patterns for Kubernetes deployments |
+| CDR-2026-014 | context_modules/rules/devops/helm_packaging.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Helm chart packaging and versioning conventions |
+| CDR-2026-015 | context_modules/rules/devops/helm_template_helpers.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Helm template helper functions and named templates |
+| CDR-2026-016 | context_modules/rules/devops/helm_wrapper_charts.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Helm wrapper chart patterns for multi-environment configs |
+| CDR-2026-017 | context_modules/rules/devops/secrets_management.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d | Secrets management with External Secrets Operator and DRY |
+| CDR-2026-018 | context_modules/rules/orchestration/airbyte_integration.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Airbyte integration patterns for data ingestion |
+| CDR-2026-019 | context_modules/rules/orchestration/airflow_dag_patterns.md | Rule | Accepted | 2026-01-16 | 2026-05-21 | 125d | Airflow DAG design patterns and best practices |
+| CDR-2026-020 | context_modules/rules/security/pre_commit_checklist.md | Rule | Accepted | 2026-05-03 | 2026-05-21 | 18d | Pre-commit security checklist for code reviews |
+| CDR-2026-021 | context_modules/rules/security/sql_injection_prevention.md | Rule | Accepted | 2026-04-29 | 2026-05-21 | 22d | SQL injection prevention for all languages |
+| CDR-2026-022 | context_modules/rules/style-guides/file_organization.md | Rule | Accepted | 2026-05-03 | 2026-05-21 | 18d | Project file organization and directory structure conventions |
+| CDR-2026-023 | context_modules/rules/style-guides/java/google_style_guide.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | Google Java Style Guide conventions |
+| CDR-2026-024 | context_modules/rules/style-guides/java/null_safety_and_optional.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | Java null safety and Optional usage patterns |
+| CDR-2026-025 | context_modules/rules/style-guides/python/pep8_and_docstrings.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | Python PEP 8 conventions and docstring standards |
+| CDR-2026-026 | context_modules/rules/testing/java/junit5_best_practices.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | JUnit 5 testing best practices for Java |
+| CDR-2026-027 | context_modules/rules/testing/python/pytest_patterns.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 0d | Pytest testing patterns and conventions for Python |
 
 **Stats**: 29 CDRs | Last Updated: 2026-05-21
 
@@ -54,7 +54,7 @@ Context Directive Records (CDRs) track approved contributions to team-ai-directi
 3. **Implementation**: Run `/levelup.implement` to create PR with:
    - Context modules (rules, personas, examples)
    - Skills (if applicable)
-   - This CDR.md file with accepted CDRs
+    - This CDR.md file with accepted CDRs
 
 ## CDR Format
 

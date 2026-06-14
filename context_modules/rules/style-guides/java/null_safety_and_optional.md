@@ -1,10 +1,15 @@
 ---
+type: Rule
+title: Java Null Safety and Optional
+description: Java null safety and Optional usage patterns
+tags: [java, style-guide, null-safety, optional]
+timestamp: 2026-06-14T00:00:00Z
 id: rule-rules-style-guides-java-null_safety_and_optional
 cdr_ref: null
 created: 2026-05-23
-modified: 2026-05-23
+modified: 2026-06-14
 verified: 2026-05-23
-age_days: 0
+age_days: 22
 evidence: []
 ---
 

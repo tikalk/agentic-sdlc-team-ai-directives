@@ -1,7 +1,16 @@
 ---
-domain: Java
-primary_expertise: Backend development, Spring Boot, testing
-instruction_type: General Capability
+type: Persona
+title: Senior Java Developer
+description: Enterprise Java, Spring Boot, testing specialist
+tags: [java, spring-boot, backend, testing, enterprise]
+timestamp: 2026-06-14T00:00:00Z
+id: persona-senior-java-developer
+cdr_ref: CDR-2026-006
+created: 2026-01-04
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 137
+evidence: []
 ---
 
 # Senior Java Developer

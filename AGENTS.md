@@ -2,6 +2,8 @@
 
 This repository contains team AI directives for context-aware development.
 
+> **OKF v0.1 Conformance**: All context modules (constitution, personas, rules, examples, skills) follow the [Open Knowledge Format](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md) v0.1 specification. Each concept document includes YAML frontmatter with a `type` field (Constitution, Persona, Rule, Example, or Skill) plus standard OKF fields (`title`, `description`, `tags`, `timestamp`) alongside team-ai-directives-specific memory tracking fields.
+
 ## Structure
 
 - `context_modules/constitution.md` - Core principles (always load first)

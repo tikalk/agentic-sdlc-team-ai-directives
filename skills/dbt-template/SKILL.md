@@ -1,6 +1,17 @@
 ---
+type: Skill
 name: dbt-template
+title: dbt Template
 description: Simple dbt workflow patterns for data transformation, testing, and project management. Use when creating dbt projects, running data pipelines, or implementing analytics engineering workflows.
+tags: [data, dbt, analytics, transformation, data-engineering]
+timestamp: 2026-06-14T00:00:00Z
+id: skill-dbt-template
+cdr_ref: null
+created: 2026-01-16
+modified: 2026-06-14
+verified: 2026-05-21
+age_days: 149
+evidence: []
 instruction_type: Generation
 priority: Standard
 ---
