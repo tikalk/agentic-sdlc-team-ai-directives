@@ -7,7 +7,7 @@ timestamp: 2026-06-14T00:00:00Z
 id: constitution
 cdr_ref: null
 created: 2026-01-04
-modified: 2026-06-14
+modified: 2026-06-19
 verified: 2026-05-21
 age_days: 161
 evidence: []
@@ -44,6 +44,18 @@ evidence: []
 
 10. **Simplicity First**
     Minimum code that solves the problem. Nothing speculative. No features beyond what was asked, no abstractions for single-use code, no "flexibility" that wasn't requested, no error handling for impossible scenarios. If 200 lines could be 50, rewrite it. Every senior engineer should agree the solution is not overcomplicated.
+
+    *Implementation ladder -- before writing code, stop at the first rung that holds:*
+    1. Does this need to exist? -> no: skip it (YAGNI)
+    2. Built-in language or platform capability? -> use it
+    3. Native framework or runtime feature? -> use it
+    4. Already available dependency? -> use it
+    5. One line? -> one line
+    6. Only then: write the minimum that works
+
+    Trust-boundary validation, data-loss handling, security, and accessibility are never on the chopping block.
+
+    *Ponytail mode (team default: `full`). Override per-session via `PONYTAIL_DEFAULT_MODE` env var or `~/.config/ponytail/config.json`.*
 
 11. **Surgical Changes**
     Touch only what you must. Clean up only your own mess. When editing existing code, don't "improve" adjacent code, comments, or formatting. Don't refactor things that aren't broken. Match existing style, even if you'd do it differently. Remove imports/variables/functions that YOUR changes made unused, but don't remove pre-existing dead code unless asked.
