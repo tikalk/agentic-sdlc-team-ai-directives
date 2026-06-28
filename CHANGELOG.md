@@ -1,5 +1,17 @@
 # Changelog
 
+## [v1.8.2] - 2026-06-28
+
+### Changed
+
+- **Constitution expanded to 14 principles** — integrated findings from @mnilax's 12-rule behavioral contract study:
+  - New Principle 2: Appropriate Delegation (deterministic logic → deterministic code)
+  - Principle 3 (Observability): Added "fail visibly — surface every skipped/rolled-back/bypassed step"
+  - Principle 5 (Tests): Added "passing test that tests nothing useful is failure"
+  - Principle 10 (Think Before Coding): Added "read before you write" + "surface conflicts, don't average them"
+  - Principle 12 (Surgical Changes): Added "convention beats novelty"
+  - Principle 13 (Goal-Driven Execution): Added "long-running operations require checkpoints"
+
 ## [v1.7.4] - 2026-05-28
 
 ### Fixed
