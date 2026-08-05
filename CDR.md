@@ -34,6 +34,10 @@ Context Directive Records (CDRs) track approved contributions to team-ai-directi
 | CDR-2026-026 | context_modules/rules/testing/java/junit5_best_practices.md | Rule | Accepted | 2026-05-23 | 2026-05-23 | 22d | JUnit 5 testing best practices for Java with nested classes, display names, a... |
 | CDR-2026-027 | context_modules/rules/testing/python/pytest_patterns.md | Rule | Accepted | 2026-05-21 | 2026-05-21 | 24d | Standards for writing and organizing Python tests with pytest |
 | CDR-2026-028 | skills/tech-radar/tech-radar-context/SKILL.md (external) | Skill | Accepted | 2026-08-01 | 2026-08-01 | 0d | Tech radar context discovery for tech stack, library, and architecture selection |
+| CDR-2026-029 | context_modules/rules/performance/frontend_performance_checklist.md | Rule | Accepted | 2026-08-05 | 2026-08-05 | 0d | Prioritized checklist of frontend performance best practices covering page we... |
+| CDR-2026-030 | context_modules/rules/performance/backend_performance_checklist.md | Rule | Accepted | 2026-08-05 | 2026-08-05 | 0d | Checklist of backend performance best practices covering caching, databases,... |
+| CDR-2026-031 | context_modules/rules/security/api_security_checklist.md | Rule | Accepted | 2026-08-05 | 2026-08-05 | 0d | Checklist of API security best practices covering authentication, access co... |
+| CDR-2026-032 | context_modules/rules/process/code_review_best_practices.md | Rule | Accepted | 2026-08-05 | 2026-08-05 | 0d | Team-wide and role-specific code review practices covering the full pre/dur... |
 | example-examples-prompts-leveling_up | context_modules/examples/prompts/leveling_up.md | Example | Auto-generated | 2026-05-23 | 2026-05-23 | 22d | Prompt template for extracting successful workflow patterns and contributing ... |
 | example-examples-prompts-mission_brief | context_modules/examples/prompts/mission_brief.md | Example | Auto-generated | 2026-05-23 | 2026-05-23 | 22d | Prompt template for creating a Mission Brief with goal, success criteria, and... |
 | example-examples-prompts-plan | context_modules/examples/prompts/plan.md | Example | Auto-generated | 2026-05-23 | 2026-05-23 | 22d | Prompt template for generating detailed step-by-step implementation plans fro... |
@@ -49,7 +53,7 @@ Context Directive Records (CDRs) track approved contributions to team-ai-directi
 | skill-gke-workload-identity | skills/gke-workload-identity/SKILL.md | Skill | Auto-generated | 2026-01-16 | 2026-05-21 | 149d | "GKE Workload Identity configuration for keyless GCP authentication. Use when... |
 | skill-helm-charts | skills/helm-charts/SKILL.md | Skill | Auto-generated | 2026-01-16 | 2026-05-21 | 149d | "Helm chart authoring patterns including chart libraries, wrapper charts, tem... |
 
-**Stats**: 40 entries | Last Updated: 2026-08-04
+**Stats**: 44 entries | Last Updated: 2026-08-05
 
 ---
 
@@ -1619,6 +1623,182 @@ Added model-invoked `tech-radar-context` skill to discover and inject Tikal Tech
 
 - Skill created in `skills/tech-radar/tech-radar-context/SKILL.md` in [tikalk/adlc-team-skills](https://github.com/tikalk/adlc-team-skills)
 - Registered in `.skills.json` under `external`
+
+---
+
+## CDR-2026-029: Frontend Performance Checklist
+
+### Status
+
+**Accepted**
+
+### Dates
+
+- **Created**: 2026-08-05
+- **Modified**: 2026-08-05
+- **Verified**: 2026-08-05
+- **Age**: 0d
+
+### Source
+
+team-ai-directives (team contribution)
+
+### Target Module
+
+`context_modules/rules/performance/frontend_performance_checklist.md`
+
+### Context Type
+
+Rule
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
+
+### Context
+
+The team had no shared, prioritized checklist for frontend performance fundamentals (page weight, compression, caching, blocking resources, image/font delivery). Existing skills (`react-best-practices`, `web-design-guidelines`) cover React/Next.js rendering and UX/accessibility, but not framework-agnostic transport- and asset-level performance practices.
+
+### Decision
+
+Added a new `performance` rule category with `frontend_performance_checklist.md`, organized into High/Medium/Low priority checklists covering page weight, load time, compression, caching, blocking JS/CSS, image/font optimization, and CDN usage. Cross-referenced with the `react-best-practices` and `web-design-guidelines` skills.
+
+### Evidence
+
+- New rule file: `context_modules/rules/performance/frontend_performance_checklist.md`
+- Checklist items sourced from team-provided frontend performance best practices
+
+---
+
+## CDR-2026-030: Backend Performance Checklist
+
+### Status
+
+**Accepted**
+
+### Dates
+
+- **Created**: 2026-08-05
+- **Modified**: 2026-08-05
+- **Verified**: 2026-08-05
+- **Age**: 0d
+
+### Source
+
+team-ai-directives (team contribution)
+
+### Target Module
+
+`context_modules/rules/performance/backend_performance_checklist.md`
+
+### Context Type
+
+Rule
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
+
+### Context
+
+The team had no shared checklist for backend performance fundamentals (caching strategies, database tuning, connection pooling, API response optimization, async offloading, and scaling). This complements the frontend performance checklist added in CDR-2026-029.
+
+### Decision
+
+Added `backend_performance_checklist.md` to the `performance` rule category, organized into 8 sections: Caching, Databases, Security, Network, API Response optimization, Asynchronism, Load Balancing & Scaling, and Code Optimization. Cross-referenced with `security/pre_commit_checklist.md`, `devops/secrets_management.md`, and `orchestration/airflow_dag_patterns.md`.
+
+### Evidence
+
+- New rule file: `context_modules/rules/performance/backend_performance_checklist.md`
+- Checklist items sourced from team-provided backend performance best practices
+
+---
+
+## CDR-2026-031: API Security Checklist
+
+### Status
+
+**Accepted**
+
+### Dates
+
+- **Created**: 2026-08-05
+- **Modified**: 2026-08-05
+- **Verified**: 2026-08-05
+- **Age**: 0d
+
+### Source
+
+team-ai-directives (team contribution)
+
+### Target Module
+
+`context_modules/rules/security/api_security_checklist.md`
+
+### Context Type
+
+Rule
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
+
+### Context
+
+The existing `security/pre_commit_checklist.md` covers general application security (secrets, SQL injection, XSS, CSRF, auth) but lacked API-specific concerns: authentication scheme selection, JWT/OAuth hardening, response header hardening, XXE/entity-expansion protection, and security monitoring/alerting for APIs.
+
+### Decision
+
+Added `api_security_checklist.md` to the `security` rule category, organized into 8 sections: Authentication, Access Control, Input Validation & Control, Output & Data Leakage, JWT, OAuth, Processing, and Monitoring & Logging. Cross-referenced with `security/pre_commit_checklist.md`, `security/sql_injection_prevention.md`, `devops/secrets_management.md`, and the new `performance/backend_performance_checklist.md` (rate limiting/throttling overlap).
+
+### Evidence
+
+- New rule file: `context_modules/rules/security/api_security_checklist.md`
+- Checklist items sourced from team-provided API security best practices
+
+---
+
+## CDR-2026-032: Code Review Best Practices
+
+### Status
+
+**Accepted**
+
+### Dates
+
+- **Created**: 2026-08-05
+- **Modified**: 2026-08-05
+- **Verified**: 2026-08-05
+- **Age**: 0d
+
+### Source
+
+team-ai-directives (team contribution)
+
+### Target Module
+
+`context_modules/rules/process/code_review_best_practices.md`
+
+### Context Type
+
+Rule
+
+### Signal Gate
+
+✓ Team-wide | ✓ High Value | ✓ Unique | ✓ Evidence
+
+### Context
+
+The team had no shared documentation of code review process expectations. Existing personas mention preferences ("thorough code reviews with constructive feedback") but there was no dedicated rule module covering team-wide process standards or the author/reviewer lifecycle (before/during/after review, merging).
+
+### Decision
+
+Added a new `process` rule category (functional concern: team workflow/collaboration, not a technical domain) with `code_review_best_practices.md`, organized into: Team-Wide Practices, Development (Author), Post-Development (Author), Before Review (Reviewer), During Review (Reviewer), After Review (Author), and After Review & Merging (Reviewer & Author). Cross-referenced with `style-guides/file_organization.md`, `security/pre_commit_checklist.md`, `security/api_security_checklist.md`, and `devops/github_actions.md`.
+
+### Evidence
+
+- New rule file: `context_modules/rules/process/code_review_best_practices.md`
+- Checklist items sourced from team-provided code review best practices
 
 ---
 
