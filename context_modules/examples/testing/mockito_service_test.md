@@ -3,15 +3,16 @@ type: Example
 title: Advanced Mockito Service Layer Test
 description: Example of advanced Mockito service testing with argument captors and nested assertions
 tags: [java, testing, mockito, service-test, example]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: example-examples-testing-mockito_service_test
 cdr_ref: null
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Example: Advanced Mockito Service Layer Test
 

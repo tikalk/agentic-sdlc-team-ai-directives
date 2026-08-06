@@ -3,15 +3,16 @@ type: Example
 title: Plan Generation Prompt
 description: Prompt template for generating detailed step-by-step implementation plans from mission briefs
 tags: [prompt, planning, mission-brief, implementation]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: example-examples-prompts-plan
 cdr_ref: null
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 Based on my Mission Brief in issue {ISSUE-123}:
 - Generate a detailed, step-by-step plan.

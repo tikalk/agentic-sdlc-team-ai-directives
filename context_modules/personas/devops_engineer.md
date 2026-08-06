@@ -3,15 +3,16 @@ type: Persona
 title: DevOps Engineer
 description: CI/CD, Infrastructure as Code, GitOps specialist
 tags: [devops, cicd, gitops, infrastructure, automation]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: persona-devops-engineer
 cdr_ref: CDR-2026-005
 created: 2026-01-16
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Persona: DevOps Engineer
 

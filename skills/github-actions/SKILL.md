@@ -1,20 +1,21 @@
 ---
 type: Skill
-name: github-actions
 title: GitHub Actions
-description: "GitHub Actions CI/CD pipeline patterns. Use when writing or reviewing GitHub Actions workflows, setting up reusable or organization-level workflows, configuring OIDC for cloud authentication, or implementing automated build and deploy pipelines."
+description: GitHub Actions CI/CD pipeline patterns. Use when writing or reviewing GitHub Actions workflows, setting up reusable or organization-level workflows, configuring OIDC for cloud authentication, or implementing automated build and deploy pipelines.
 tags: [devops, github-actions, cicd, automation, oidc]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: skill-github-actions
 cdr_ref: null
 created: 2026-01-16
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
+name: github-actions
 instruction_type: Generation
 priority: Standard
 ---
+
 
 # GitHub Actions Skill
 

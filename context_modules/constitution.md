@@ -3,15 +3,16 @@ type: Constitution
 title: Team Constitution
 description: Core principles governing all AI agent behavior and team interactions
 tags: [governance, principles, constitution]
-timestamp: 2026-06-14T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: constitution
 cdr_ref: null
 created: 2026-01-04
-modified: 2026-06-28
-verified: 2026-05-21
-age_days: 161
+modified: 2026-08-06
+verified: 2026-08-06
+age_days: 0
 evidence: []
 ---
+
 
 # Team Constitution
 
@@ -68,3 +69,9 @@ evidence: []
 
 14. **Memory as the Harness Core**
     Memory transforms execution into learning. Every interaction generates traces—outputs, failures, decisions—that should accumulate into knowledge. Storing experiences is not the same as learning; what matters is deciding what to keep, how to merge it with what the system already knows, and what to forget. Without memory, every execution starts from scratch. With memory, execution compounds. Design the memory layer to filter signal from noise, consolidate conflicting learnings, and make knowledge reusable across future tasks.
+
+## Governance
+
+- **Amendments**: proposed as CDRs via `/levelup-init` or `/levelup-specify`, reviewed via `/levelup-clarify`, published via `/levelup-publish`. Direct edits via `/team-constitution` are reserved for bootstrapping and explicit team decisions.
+- **Compliance**: this constitution is loaded by `team-boot` at the start of every session. Agents and humans MUST follow it; on conflict, the constitution supersedes ad-hoc practices.
+- **Alignment**: `/team-repair` (Check 6) verifies project constitutions inherit these principles. Project constitutions may extend, never contradict.

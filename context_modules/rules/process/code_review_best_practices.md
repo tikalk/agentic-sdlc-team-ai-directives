@@ -3,15 +3,16 @@ type: Rule
 title: Code Review Best Practices
 description: Team-wide and role-specific (author/reviewer) code review practices covering process, standards, and the full pre/during/post-review lifecycle
 tags: [process, code-review, collaboration, quality, checklist]
-timestamp: 2026-08-05T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-process-code_review_best_practices
 cdr_ref: CDR-2026-032
 created: 2026-08-05
 modified: 2026-08-05
-verified: 2026-08-05
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: Code Review Best Practices
 

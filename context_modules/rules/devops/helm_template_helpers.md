@@ -3,15 +3,16 @@ type: Rule
 title: Helm Template Helpers
 description: Helm template helper functions for consistent naming, label generation, and reusable template logic
 tags: [devops, helm, kubernetes, templates, helpers]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-devops-helm_template_helpers
 cdr_ref: CDR-2026-015
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Helm Template Helpers
 

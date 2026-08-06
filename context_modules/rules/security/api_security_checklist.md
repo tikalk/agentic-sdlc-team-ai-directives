@@ -3,15 +3,16 @@ type: Rule
 title: API Security Checklist
 description: Checklist of API security best practices covering authentication, access control, input validation, output handling, JWT, OAuth, processing, and monitoring
 tags: [security, api, authentication, oauth, jwt, checklist]
-timestamp: 2026-08-05T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-security-api_security_checklist
 cdr_ref: CDR-2026-031
 created: 2026-08-05
 modified: 2026-08-05
-verified: 2026-08-05
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: API Security Checklist
 

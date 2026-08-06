@@ -3,15 +3,16 @@ type: Persona
 title: Data Analyst
 description: SQL, dashboards, reporting specialist
 tags: [data-analysis, sql, dashboards, reporting, analytics]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: persona-data-analyst
 cdr_ref: CDR-2026-004
 created: 2026-01-04
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Persona: Data Analyst
 

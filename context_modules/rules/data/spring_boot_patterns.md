@@ -3,15 +3,16 @@ type: Rule
 title: Spring Boot Application Patterns
 description: Spring Boot data layer patterns and conventions for repository design, configuration, and testing
 tags: [java, spring-boot, data, jpa, testing]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-data-spring_boot_patterns
 cdr_ref: CDR-2026-009
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: Spring Boot Application Patterns
 

@@ -3,15 +3,16 @@ type: Rule
 title: Frontend Performance Checklist
 description: Prioritized checklist of frontend performance best practices covering page weight, load time, caching, assets, and delivery
 tags: [performance, frontend, web, optimization, checklist]
-timestamp: 2026-08-05T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-performance-frontend_performance_checklist
 cdr_ref: CDR-2026-029
 created: 2026-08-05
 modified: 2026-08-05
-verified: 2026-08-05
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: Frontend Performance Checklist
 

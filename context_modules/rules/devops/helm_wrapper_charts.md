@@ -3,15 +3,16 @@ type: Rule
 title: Helm Wrapper Charts
 description: Helm wrapper chart patterns for extending upstream charts without modifying source code
 tags: [devops, helm, kubernetes, wrapper-charts, packaging]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-devops-helm_wrapper_charts
 cdr_ref: CDR-2026-016
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: Helm Wrapper Charts and Template Extension
 
