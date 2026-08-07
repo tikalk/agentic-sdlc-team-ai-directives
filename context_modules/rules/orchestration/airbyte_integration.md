@@ -3,15 +3,16 @@ type: Rule
 title: Airbyte Integration Patterns
 description: Generic Airbyte integration patterns for triggering data syncs, managing connections, and orchestrating data pipelines
 tags: [orchestration, airbyte, data-integration, etl, data-engineering]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-orchestration-airbyte_integration
 cdr_ref: CDR-2026-018
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Generic Airbyte Integration Patterns
 

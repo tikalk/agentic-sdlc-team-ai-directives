@@ -3,15 +3,16 @@ type: Persona
 title: Senior Python Developer
 description: Python, data/ML, testing specialist
 tags: [python, backend, testing, data, ml]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: persona-senior-python-developer
 cdr_ref: CDR-2026-007
 created: 2026-01-04
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Senior Python Developer
 

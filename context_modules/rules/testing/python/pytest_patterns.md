@@ -3,15 +3,16 @@ type: Rule
 title: Python Testing with Pytest
 description: Standards for writing and organizing Python tests with pytest
 tags: [python, testing, pytest, tdd, fixtures]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-testing-python-pytest_patterns
 cdr_ref: CDR-2026-027
 created: 2026-05-21
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: Python Testing with Pytest
 

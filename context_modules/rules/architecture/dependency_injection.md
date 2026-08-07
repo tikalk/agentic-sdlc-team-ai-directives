@@ -3,15 +3,16 @@ type: Rule
 title: Dependency Injection
 description: Dependency injection patterns for maintainable, testable, and loosely coupled code
 tags: [architecture, dependency-injection, testing, maintainability]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-architecture-dependency_injection
 cdr_ref: CDR-2026-008
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Dependency Injection
 

@@ -1,20 +1,21 @@
 ---
 type: Skill
-name: crossplane
 title: Crossplane
-description: "Crossplane composition patterns for cloud-agnostic infrastructure as code. Use when writing Crossplane Compositions, XRDs (CompositeResourceDefinitions), or Claims, managing cloud resources declaratively from Kubernetes, or designing platform team infrastructure abstractions with Crossplane."
+description: Crossplane composition patterns for cloud-agnostic infrastructure as code. Use when writing Crossplane Compositions, XRDs (CompositeResourceDefinitions), or Claims, managing cloud resources declaratively from Kubernetes, or designing platform team infrastructure abstractions with Crossplane.
 tags: [devops, crossplane, infrastructure, iac, kubernetes, cloud]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: skill-crossplane
 cdr_ref: null
 created: 2026-01-16
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
+name: crossplane
 instruction_type: Generation
 priority: Standard
 ---
+
 
 # Crossplane Skill
 

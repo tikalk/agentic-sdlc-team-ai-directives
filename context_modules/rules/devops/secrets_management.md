@@ -3,15 +3,16 @@ type: Rule
 title: Secrets Management
 description: Comprehensive secrets management patterns for Kubernetes using External Secrets Operator and DRY principles
 tags: [devops, secrets, kubernetes, external-secrets, security]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-devops-secrets_management
 cdr_ref: CDR-2026-017
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Secrets Management
 

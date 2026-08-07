@@ -3,15 +3,16 @@ type: Rule
 title: GitHub Actions Workflows and Reusable Actions
 description: Standards for creating and managing GitHub Actions workflows and reusable actions
 tags: [devops, github-actions, cicd, reusable-workflows, oidc]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-devops-github_actions
 cdr_ref: CDR-2026-011
 created: 2026-01-16
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: GitHub Actions Workflows and Reusable Actions
 

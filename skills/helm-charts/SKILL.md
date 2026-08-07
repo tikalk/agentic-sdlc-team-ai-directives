@@ -1,20 +1,21 @@
 ---
 type: Skill
-name: helm-charts
 title: Helm Charts
-description: "Helm chart authoring patterns including chart libraries, wrapper charts, template helpers, and packaging standards. Use when creating or reviewing Helm charts, building chart library abstractions, packaging Kubernetes applications, or designing multi-environment Helm deployments."
+description: Helm chart authoring patterns including chart libraries, wrapper charts, template helpers, and packaging standards. Use when creating or reviewing Helm charts, building chart library abstractions, packaging Kubernetes applications, or designing multi-environment Helm deployments.
 tags: [devops, helm, kubernetes, charts, packaging]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: skill-helm-charts
 cdr_ref: null
 created: 2026-01-16
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
+name: helm-charts
 instruction_type: Generation
 priority: Standard
 ---
+
 
 # Helm Charts Skill
 

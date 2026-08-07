@@ -3,15 +3,16 @@ type: Rule
 title: File Organization and Structure
 description: Standards for file organization, sizing, and code structure across all languages
 tags: [style-guide, file-organization, code-structure, maintainability]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-style-guides-file_organization
 cdr_ref: CDR-2026-022
 created: 2026-05-03
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: File Organization and Structure
 

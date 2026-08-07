@@ -3,15 +3,16 @@ type: Rule
 title: Helm Chart Packaging and Values Design
 description: Helm chart packaging standards and values design principles
 tags: [devops, helm, kubernetes, packaging, values]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: rule-rules-devops-helm_packaging
 cdr_ref: CDR-2026-014
 created: 2026-05-23
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
 ---
+
 
 # Rule: Helm Chart Packaging and Values Design
 

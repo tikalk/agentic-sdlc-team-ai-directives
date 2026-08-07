@@ -1,20 +1,21 @@
 ---
 type: Skill
-name: external-secrets
 title: External Secrets
-description: "External Secrets Operator (ESO) patterns for syncing secrets from cloud secret stores into Kubernetes. Use when integrating AWS Secrets Manager, GCP Secret Manager, HashiCorp Vault, or other backends with Kubernetes workloads, designing secret rotation strategies, or following DRY secrets management patterns across namespaces."
+description: External Secrets Operator (ESO) patterns for syncing secrets from cloud secret stores into Kubernetes. Use when integrating AWS Secrets Manager, GCP Secret Manager, HashiCorp Vault, or other backends with Kubernetes workloads, designing secret rotation strategies, or following DRY secrets management patterns across namespaces.
 tags: [devops, secrets, kubernetes, security, external-secrets, cloud]
-timestamp: 2026-08-04T00:00:00Z
+timestamp: "2026-08-06T00:00:00Z"
 id: skill-external-secrets
 cdr_ref: null
 created: 2026-01-16
 modified: 2026-06-14
-verified: 2026-08-04
+verified: 2026-08-06
 age_days: 0
 evidence: []
+name: external-secrets
 instruction_type: Security
 priority: Critical
 ---
+
 
 # External Secrets Skill
 
