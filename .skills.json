@@ -94,16 +94,16 @@
       "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
       "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/advanced-evaluation/SKILL.md"
     },
-    "tech-radar-context": {
+    "tech-radar-boot": {
       "version": "^1.0.0",
-      "description": "Discover and inject Tikal Israeli Tech Radar context \u2014 adoption ring, quadrant, and Tikal's opinion \u2014 for any technology, framework, database, library, or cloud tool implied by the current prompt. Model-invoked whenever a tech stack choice is being made or evaluated.",
+      "description": "Class boot for technology selection \u2014 injects Tikal Israeli Tech Radar context (adoption ring, quadrant, and Tikal's opinion) for any technology, framework, database, library, or cloud tool implied by the current prompt, recommends Keep/Start alternatives for Stop items, and pairs the selection with decision capture via /architect-specify (ADR). Model-invoked whenever a tech stack choice is being made or evaluated. Formerly tech-radar-context.",
       "categories": [
         "tech-radar",
         "context",
         "adoption"
       ],
       "source": "https://github.com/tikalk/adlc-team-skills",
-      "url": "https://raw.githubusercontent.com/tikalk/adlc-team-skills/main/skills/tech-radar/tech-radar-context/SKILL.md"
+      "url": "https://raw.githubusercontent.com/tikalk/adlc-team-skills/main/skills/tech-radar/tech-radar-boot/SKILL.md"
     }
   },
   "blocked": [
