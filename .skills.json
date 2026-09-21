@@ -1,0 +1,120 @@
+{
+  "version": "2.0.0",
+  "source": "team-ai-directives",
+  "description": "Team skills manifest. The `default` list contains skill names that are auto-installed during project init. The `external` map contains on-demand skills fetched by URL. The `blocked` list contains skills that must never be installed.",
+  "default": [
+    "dbt-template",
+    "github-actions",
+    "helm-charts",
+    "crossplane",
+    "external-secrets",
+    "gke-workload-identity"
+  ],
+  "external": {
+    "react-best-practices": {
+      "version": "^1.0.0",
+      "description": "React and Next.js performance optimization guidelines from Vercel Engineering. Contains 40+ rules across 8 categories prioritized by impact. Use when writing React components, optimizing performance, or reviewing code for best practices.",
+      "categories": [
+        "frontend",
+        "react",
+        "nextjs",
+        "performance",
+        "optimization"
+      ],
+      "source": "https://github.com/vercel-labs/agent-skills",
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/react-best-practices/SKILL.md"
+    },
+    "web-design-guidelines": {
+      "version": "^1.0.0",
+      "description": "Review UI code for compliance with web interface best practices. Audits your code for 100+ rules covering accessibility, performance, and UX. Use when reviewing UI, checking accessibility, or auditing design.",
+      "categories": [
+        "frontend",
+        "ui",
+        "ux",
+        "accessibility",
+        "design"
+      ],
+      "source": "https://github.com/vercel-labs/agent-skills",
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/web-design-guidelines/SKILL.md"
+    },
+    "composition-patterns": {
+      "version": "^1.0.0",
+      "description": "React composition patterns that scale. Helps avoid boolean prop proliferation through compound components, state lifting, and internal composition. Use when refactoring components or building reusable libraries.",
+      "categories": [
+        "frontend",
+        "react",
+        "patterns",
+        "architecture"
+      ],
+      "source": "https://github.com/vercel-labs/agent-skills",
+      "url": "https://raw.githubusercontent.com/vercel-labs/agent-skills/main/skills/composition-patterns/SKILL.md"
+    },
+    "context-engineering-fundamentals": {
+      "version": "^1.0.0",
+      "description": "Understand context, context windows, and anatomy of context in agent systems. Foundation for effective AI agent interactions.",
+      "categories": [
+        "context-engineering",
+        "fundamentals",
+        "ai"
+      ],
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/context-fundamentals/SKILL.md"
+    },
+    "context-degradation": {
+      "version": "^1.0.0",
+      "description": "Recognize patterns of context failure: lost-in-middle, poisoning, distraction, and clash. Debug agent context issues.",
+      "categories": [
+        "context-engineering",
+        "debugging",
+        "ai"
+      ],
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/context-degradation/SKILL.md"
+    },
+    "evaluation": {
+      "version": "^1.0.0",
+      "description": "Build evaluation frameworks for agent systems. Test and measure AI agent performance.",
+      "categories": [
+        "testing",
+        "evaluation",
+        "ai"
+      ],
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/evaluation/SKILL.md"
+    },
+    "advanced-evaluation": {
+      "version": "^1.0.0",
+      "description": "LLM-as-a-Judge techniques: direct scoring, pairwise comparison, rubric generation, and bias mitigation.",
+      "categories": [
+        "testing",
+        "evaluation",
+        "llm-as-judge",
+        "ai"
+      ],
+      "source": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering",
+      "url": "https://raw.githubusercontent.com/muratcankoylan/Agent-Skills-for-Context-Engineering/main/skills/advanced-evaluation/SKILL.md"
+    },
+    "tech-radar-boot": {
+      "version": "^1.0.0",
+      "description": "Class boot for technology selection \u2014 injects Tikal Israeli Tech Radar context (adoption ring, quadrant, and Tikal's opinion) for any technology, framework, database, library, or cloud tool implied by the current prompt, recommends Keep/Start alternatives for Stop items, and pairs the selection with decision capture via /architect-specify (ADR). Model-invoked whenever a tech stack choice is being made or evaluated. Formerly tech-radar-context.",
+      "categories": [
+        "tech-radar",
+        "context",
+        "adoption"
+      ],
+      "source": "https://github.com/tikalk/adlc-team-skills",
+      "url": "https://raw.githubusercontent.com/tikalk/adlc-team-skills/main/skills/tech-radar/tech-radar-boot/SKILL.md"
+    }
+  },
+  "blocked": [
+    {
+      "id": "github:unsafe-org/deprecated-skill",
+      "reason": "Security vulnerability - deprecated by maintainer"
+    }
+  ],
+  "policy": {
+    "auto_install_default": true,
+    "enforce_blocked": true,
+    "allow_project_override": true
+  }
+}

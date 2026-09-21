@@ -1,0 +1,286 @@
+# Contributing to team-ai-directives
+
+This repository is a living asset, maintained by the **AI Development Guild**.
+It is treated with the same rigor as our production code—each change shapes how
+our agents behave and impacts downstream automation.
+
+## Governance Overview
+
+All changes must be submitted via a Pull Request. The PR process requires peer
+review by at least one member of the AI Development Guild. This structured
+process ensures that all contributions are high-quality, align with our team's
+standards, and are well-documented before becoming part of our official library,
+guaranteeing downstream automation (spec-kit CLI, MCP, IDE scripts) remains
+trustworthy.
+
+## Workflow
+
+1. **Pull Latest Directives** – Before starting work, pull the latest changes
+   from the team-ai-directives repository to ensure you are using the team's
+   most current standards.
+
+2. **Fork and Branch** – Create feature branches named `feature/<slug>` or
+   `docs/<slug>`.
+
+3. **Add or Update Modules** – Follow the directory conventions under
+   `context_modules/`. Use standardized templates from existing examples.
+
+4. **Validate** – Ensure markdown files lint cleanly and render properly.
+
+5. **Document Impact** – Note which projects or workflows need to update their
+   references.
+
+6. **Open a Pull Request** – Include:
+   * Summary of changes
+   * Rationale and intended benefits
+   * Any migration steps (e.g., "projects can checkout the v1.1.0 tag for old
+     structure, new projects should use v1.2.0").
+
+7. **Guild Review** – At least one member of the AI Development Guild must
+   approve before merge.
+
+8. **Contribute Back via /levelup** – If you develop a highly effective new
+   prompt or a "golden" example during your work, formalize it and submit back
+   to this repository using the `/levelup` workflow to build the team's shared
+   knowledge base. Use `/levelup.implement` to create a PR with your changes.
+
+## Guidelines
+
+* Maintain a high signal-to-noise ratio: each directive should be actionable
+  and unambiguous.
+* Avoid leaking secrets or sensitive data; use anonymized examples.
+* Prefer incremental git tags (v2.0.0, v3.0.0) when guidance changes materially.
+* Keep examples up to date with current best practices and ensure they run or
+  lint cleanly.
+* Use structured references for cross-linking: `@rule:relative_path`
+  (relative to rules/ directory), `@example:relative_path`, `@persona:name` to
+  reduce duplication and enable tooling.
+* Share learnings: After completing complex tasks, share your workflow,
+  successful prompts, or challenges with the team in the AI Development Guild
+  forum.
+
+## Verification Workflow
+
+All directives in this repository include **memory metadata** (YAML frontmatter) to track freshness and validity over time.
+
+### Understanding Directive Freshness
+
+When you open a directive file, you'll see at the top:
+
+```yaml
+---
+verified: 2026-05-18
+age_days: 33
+---
+
+> ⚠️ **Memory Verification**
+> This directive is 33 days old. Before applying:
+> - [ ] Pattern still exists in current codebase
+> - [ ] Rule is actively followed by team
+> - [ ] No conflicting rules introduced
+```
+
+### Verification Process
+
+1. **Automated Verification** — scan all directives and update `verified` timestamps for valid ones:
+   * Spec Kit projects: run `/levelup.validate`
+   * Skills-based projects: invoke the `team-repair` skill (`--freshness` / `--conflicts`)
+
+2. **Manual Verification** (when reviewing PRs):
+   * Check that the directive still applies
+   * Verify code examples still work
+   * Confirm no conflicts with newer rules
+   * Update the `verified` date in the YAML frontmatter
+
+3. **Stale Directives** (>30 days without verification):
+   * Flagged by `/levelup.validate` or `team-repair`
+   * Should be reviewed and either:
+     * Updated (refresh content, reset `verified` date)
+     * Deprecated (move to archive or delete)
+     * Confirmed still valid (update `verified` date only)
+
+### Updating Verification Metadata
+
+When you verify a directive, update these fields:
+
+```yaml
+---
+verified: 2026-05-18    # Set to today
+age_days: 0             # Reset to 0 (recalculated from created date)
+---
+```
+
+And append to the verification log at the bottom of the file:
+
+```markdown
+| Date | Verified By | Notes |
+|------|-------------|-------|
+| 2026-05-18 | @username | Reviewed, still valid |
+```
+
+## Contributing Skills
+
+### Skill Requirements
+
+All new skills MUST include simple frontmatter in their SKILL.md:
+
+```yaml
+---
+name: skill-name
+description: One-sentence description with trigger keywords
+license: MIT                   # Optional
+---
+```
+
+### Skill Development Process
+
+1. **Create Skill Directory**: Follow the structure in `AGENTS.md`
+2. **Add Frontmatter**: Include simple name and description in SKILL.md
+3. **Test Skill**: Ensure skill works standalone with Read/Grep/Bash tools
+4. **Submit PR**: Include skill description and testing validation
+
+### Skills Package Manager Integration
+
+When adding or modifying skills, update `.skills.json` to control how the
+Skills Package Manager handles them:
+
+```json
+{
+  "skills": {
+    "required": {
+      "local:./skills/critical-skill": {
+        "version": "*",
+        "description": "One-sentence description with trigger keywords",
+        "categories": ["category1", "category2"]
+      }
+    },
+    "recommended": {
+      "local:./skills/optional-skill": {
+        "version": "*",
+        "description": "Description for discovery",
+        "categories": ["category1"]
+      },
+      "github:org/repo/external-skill": {
+        "version": "^1.0.0",
+        "description": "External skill description",
+        "categories": ["frontend", "react"],
+        "source": "https://github.com/org/repo",
+        "url": "https://raw.githubusercontent.com/org/repo/main/..."
+      }
+    },
+    "internal": {
+      "local:./skills/internal-skill": {
+        "version": "*",
+        "description": "Internal team skill",
+        "categories": ["internal"]
+      }
+    },
+    "blocked": [
+      {
+        "id": "github:unsafe-org/deprecated-skill",
+        "reason": "Security vulnerability - deprecated by maintainer"
+      }
+    ]
+  },
+  "registry": {
+    "skills": {
+      "github:org/repo/discoverable-skill": {
+        "version": "^1.0.0",
+        "description": "Available for manual installation",
+        "categories": ["category1"],
+        "source": "https://github.com/org/repo",
+        "url": "https://raw.githubusercontent.com/org/repo/main/..."
+      }
+    }
+  },
+  "policy": {
+    "auto_install_required": true,
+    "enforce_blocked": true,
+    "allow_project_override": true
+  }
+}
+```
+
+**Categories:**
+
+* **required**: Auto-installed during `specify init` (use sparingly for
+  critical skills)
+* **recommended**: Suggested to users but optional (most skills should be here)
+* **internal**: Local team skills in `skills/` directory (auto-discovered)
+* **blocked**: Skills prevented from installation (security/compliance)
+* **registry**: Additional skills available for manual discovery and installation
+
+**Skill Metadata Fields:**
+
+* `version`: Version specifier (`*`, `^1.0.0`, `~1.2.0`)
+* `description`: One-sentence description with trigger keywords for discovery
+* `categories`: Array of category tags for filtering
+* `source`: Repository URL (for external skills)
+* `url`: Direct SKILL.md URL for webfetch (for external skills)
+
+**Version Specifiers:**
+
+* `"*"` - Any version (for local/internal skills)
+* `"^1.0.0"` - Compatible with 1.x.x (for external skills)
+* `"~1.2.0"` - Compatible with 1.2.x (for external skills)
+
+### Skill Validation Checklist
+
+Before submitting a skill PR, ensure:
+
+* [ ] SKILL.md includes simple frontmatter (name + description)
+* [ ] Description includes trigger keywords for discovery
+* [ ] Skill works standalone (no external dependencies at runtime)
+* [ ] All file references in skill are relative paths
+* [ ] Scripts (if any) use proper shebang and error handling
+* [ ] For external skills: URL is accessible and skill follows simple format
+* [ ] `.skills.json` updated if skill should be
+      required/recommended/blocked/registry
+
+Thank you for helping keep our shared knowledge base sharp and reliable!
+
+---
+
+## Release Process
+
+This repository is a knowledge base, not a Spec-Kit extension. Releases are
+managed with git tags and the `.skills.json` `version` field.
+
+### Release Checklist
+
+1. Update `.skills.json` `version` if the manifest changed.
+2. Update `CHANGELOG.md`.
+3. Review changes: `git diff`
+4. Commit changes: `git commit -am "chore: prepare release vX.X.X"`
+5. Create tag: `git tag vX.X.X`
+6. Push: `git push origin main --tags`
+7. (Optional) Create GitHub release with notes
+
+### Git Tag Format
+
+```
+v{VERSION}
+```
+
+Examples: `v1.6.1`, `v2.0.0`
+
+### Fork Versioning
+
+When maintaining a fork, use build metadata suffix:
+
+**Format:** `{upstream_version}+{fork_name}{fork_release_number}`
+
+**Examples:**
+* `1.6.1+acme1` - Acme's first release based on upstream 1.6.1
+* `1.6.1+acme2` - Acme's second iteration
+* `1.6.1+tikal3` - Tikal's third iteration on 1.6.1
+
+**Fork Workflow:**
+1. Sync with upstream: `git fetch upstream && git merge upstream/main`
+2. Increment fork number in version
+3. Tag with fork suffix: `git tag v1.6.1+acme2`
+4. Push: `git push origin main --tags`
+
+**Upstream Merge:**
+* When contributing back, remove fork suffix
+* Use clean upstream version: `1.6.1` (not `1.6.1+acme2`)
