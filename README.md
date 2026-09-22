@@ -58,6 +58,14 @@ cd team-ai-directives
 
 Then reference it in your project initialization or configuration.
 
+**Ongoing maintenance** with [`adlc-cli`](https://github.com/tikalk/adlc-cli):
+
+```bash
+adlc-cli team update     # git pull this repo + skills update + confidence update
+adlc-cli team repair     # full repair via agent run (reindex, conflicts, freshness)
+adlc-cli team repair --update-confidence  # deterministic confidence aggregation (no agent)
+```
+
 ## Who This Is For
 
 - Engineering teams wanting consistent AI agent behavior
