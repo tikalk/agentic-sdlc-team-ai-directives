@@ -9,7 +9,7 @@ A forkable foundation for version-controlled AI agent behavior.
 - **[12-Factor Agentic SDLC](https://github.com/tikalk/agentic-sdlc-12-factors)** — the methodology (strategic mindset, structured planning, directives as code, traceability)
 - **This repo** — the version-controlled team knowledge base (constitution, personas, rules, skills, CDRs)
 - **[agentic-sdlc-spec-kit](https://github.com/tikalk/agentic-sdlc-spec-kit)** — the Spec-Driven Development toolkit; consumes this knowledge base via the bundled `team-ai-directives` extension
-- **[adlc-team-skills](https://github.com/tikalk/adlc-team-skills)** — agent skills that implement the methodology; consume this knowledge base via `team-*` and `levelup-*` skills
+- **[adlc-team-skills](https://github.com/tikalk/adlc-team-skills)** — agent skills that implement the methodology; consume this knowledge base via `team-*` skills
 
 **Quick Start:** See [GETTING_STARTED.md](GETTING_STARTED.md) for a 5-minute setup guide.
 
@@ -155,7 +155,7 @@ Published directives include a verification banner:
 
 ### Verification Workflow
 
-1. Scan the knowledge base — `/levelup.validate` in spec-kit projects, or `team-repair --freshness` / `team-repair --conflicts` in skills-based projects
+1. Scan the knowledge base — `team.validate` in spec-kit projects, or `team-repair --freshness` / `team-repair --conflicts` in skills-based projects
 2. Valid directives get their `verified` timestamp updated
 3. Stale directives (>30 days) are flagged for review
 4. Update or deprecate stale directives as needed
@@ -657,12 +657,12 @@ Governance capabilities are available through both delivery mechanisms — as **
 | Repair | `team.repair` | `team-repair` | Re-index CDR.md, .skills.json, and AGENTS.md; health check; conflict scan; freshness verification |
 | Manage skills | `team.skills` | `team-skills` | Browse and install team skills from the knowledge base |
 | Verify health | `team.verify` | `team-repair --health-only` | Verify knowledge base config, skills registry, CDR tracking, and constitution alignment |
-| Curate CDRs | `team.curate`, `levelup.init` / `levelup.specify` | `levelup-init` / `levelup-specify` | Propose Context Directive Records from a codebase or completed feature |
-| Review CDRs | `levelup.clarify` | `levelup-clarify` | Accept, reject, or defer proposed CDRs |
-| Publish CDRs | `team.evolve`, `levelup.implement` | `levelup-implement` | Compile accepted CDRs into knowledge base artifacts and a draft PR |
-| Validate | `levelup.validate` | `team-repair --conflicts` / `--freshness` | Scan for rule conflicts and update verification timestamps |
+| Curate CDRs | — | `team-init` / `team-learn` | Propose Context Directive Records from a codebase or completed feature |
+| Review CDRs | — | `team-learn` | Accept, reject, or defer proposed CDRs |
+| Publish CDRs | `team.evolve` | `team-learn` | Compile accepted CDRs into knowledge base artifacts and a draft PR |
+| Validate | `team.validate` | `team-repair --conflicts` / `--freshness` | Scan for rule conflicts and update verification timestamps |
 
-**Naming conventions:** spec-kit commands are canonically named `adlc.team-ai-directives.*` / `adlc.levelup.*` and are invoked via the short aliases shown above (`team.discover`, `levelup.init`). Agent skills use dash-names (`team-discover`, `levelup-init`) and are model-invoked through the [Agent Skills standard](https://agentskills.io).
+**Naming conventions:** spec-kit commands are canonically named `adlc.team-ai-directives.*` and are invoked via the short aliases shown above (`team.discover`, `team.init`). Agent skills use dash-names (`team-discover`, `team-init`) and are model-invoked through the [Agent Skills standard](https://agentskills.io).
 
 ### Integration
 
