@@ -38,10 +38,14 @@ specify init <project> --team-ai-directives https://github.com/your-org/team-ai-
 For agents that support the [Agent Skills standard](https://agentskills.io) (Claude Code, Codex, OpenCode, Cursor, Gemini, and others), install the governance and architecture skills from [adlc-team-skills](https://github.com/tikalk/adlc-team-skills):
 
 ```bash
+# One command: install skills + configure team-ai-directives (runs /team-setup interactively)
+npx adlc-cli team setup tikalk/adlc-team-skills -a opencode
+
+# Or install skills only, then invoke /team-setup in your agent
 npx skills add tikalk/adlc-team-skills
 ```
 
-Then invoke the `team-setup` skill in your project to clone, point at, or scaffold this knowledge base. The skills locate it via `.adlc/init-options.json` or the `ADLC_TEAM_AI_DIRECTIVES` environment variable.
+`adlc-cli team setup` installs the skills, generates slash commands, wires lifecycle events, and runs the `/team-setup` skill via `agent run` to clone, point at, or scaffold this knowledge base. The skills locate it via `.adlc/init-options.json` or the `ADLC_TEAM_AI_DIRECTIVES` environment variable.
 
 ### Option 3: Authoring (Fork and Clone)
 
