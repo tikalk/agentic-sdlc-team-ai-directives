@@ -26,3 +26,11 @@ stale_after: 180d
 
 ## Rationale
 Consistency and readability help both humans and agents maintain the codebase confidently.
+
+## String Enums (Python 3.12+)
+
+- Use `enum.StrEnum` for all typed string constant sets in Python 3.12+ codebases.
+- Do NOT use `class MyEnum(str, Enum)` — `StrEnum` is the standard library idiom since Python 3.11, providing cleaner definitions and unambiguous `str` subclassing.
+- Legacy `class MyEnum(str, Enum)` is permitted only in projects that must support Python 3.10 or earlier.
+
+<!-- CDR: CDR-INC-001, Date: 2026-11-01, ID: rule-style-guides-python-strenum -->

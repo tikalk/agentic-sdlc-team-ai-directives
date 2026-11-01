@@ -70,3 +70,34 @@ stale_after: 180d
 
 14. **Memory as the Harness Core**
     Memory transforms execution into learning. Every interaction generates traces—outputs, failures, decisions—that should accumulate into knowledge. Storing experiences is not the same as learning; what matters is deciding what to keep, how to merge it with what the system already knows, and what to forget. Without memory, every execution starts from scratch. With memory, execution compounds. Design the memory layer to filter signal from noise, consolidate conflicting learnings, and make knowledge reusable across future tasks.
+
+## Derived Codebase Analysis & Boundary Principles
+
+> **CDR Reference**: CDR-CONST-001
+> **Published**: 2026-11-01
+> **Age**: 0 days
+> **Verification**: Check if principles still align with team boundary discipline
+
+*Derived from cross-sub-system analysis in tech-pioneer (gui, pioneer_pipeline, scripts). Ratified as Constitution v1.1.0.*
+
+### 15. Single Choke Point per External Concern
+
+Every external concern — model access, tracing, persistence, report rendering, credential verification — MUST enter the system through exactly one module. Agents MUST NOT call a vendor SDK, instantiate a database client, or build an export format outside that module. The choke point owns configuration, credentials, error translation, and default behaviour. If a second call path is needed, extend the choke point; do not bypass it.
+
+- **Evidence**: `pioneer_pipeline/llm.py` (sole LiteLLM entry), `pioneer_pipeline/observability.py` (sole LangFuse entry), `gui/reports.py` (sole report projection for HTML/Markdown/JSON), `gui/runner.py` (sole owner of per-run background tasks).
+- **Rationale**: Multiple call sites drift. Choke points make "who talks to the outside world?" answerable by reading one file.
+
+### 16. Validate at Boundary, Fail Loud Early
+
+Every boundary MUST validate its inputs before serving work, and MUST fail visibly when validation fails. Static configuration and fixtures are validated at startup, not on first use. Required credentials are asserted when the client is constructed. Preflight checks return a non-zero exit code when any check fails. Terminal domain state overrides stale source metadata — a rejected run MUST NOT render a pass. Silent fallbacks, partial successes, and "best effort" continuations are defects, not resilience.
+
+- **Evidence**: `gui/app.py:42-47` (fixtures validated during app construction), `gui/fixtures.py:76-194` (explicit schema + cross-field invariants), `gui/reports.py:16-23` (terminal state overrides fixture verdict), `pioneer_pipeline/llm.py:16-22` (missing key raises actionable remediation), `scripts/verify_setup.py:132-151` (any check failure → exit 1).
+- **Rationale**: A broken demo that half-works is more expensive than one that refuses to start.
+
+### Reinforcement: Principle 1 (Human Oversight Mandatory)
+
+Code that gates on human judgment MUST make that gate idempotent and final: the first decision wins, duplicate submissions are no-ops, and no timeout may auto-approve. The gate is part of the oversight mechanism, not an implementation detail. See `context_modules/rules/framework/python_human_review_gate.md`.
+
+<!-- CDR: CDR-CONST-001, Date: 2026-11-01, ID: constitution-amendment-v1.1.0 -->
+
+**Version**: 1.1.0 | **Ratified**: 2026-01-04 (preserved) | **Last Amended**: 2026-11-01
