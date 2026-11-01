@@ -70,3 +70,23 @@ stale_after: 180d
 
 14. **Memory as the Harness Core**
     Memory transforms execution into learning. Every interaction generates traces—outputs, failures, decisions—that should accumulate into knowledge. Storing experiences is not the same as learning; what matters is deciding what to keep, how to merge it with what the system already knows, and what to forget. Without memory, every execution starts from scratch. With memory, execution compounds. Design the memory layer to filter signal from noise, consolidate conflicting learnings, and make knowledge reusable across future tasks.
+
+---
+
+## Derived from Codebase Analysis (2026-11-01)
+
+*The following principle was derived from cross-cutting patterns discovered in the tech-pioneer codebase via `/levelup-init`. Review and ratify as needed.*
+
+15. **Design for Testability**
+    Code structure must enable test isolation without test-only infrastructure. Specifically:
+    - Module-level singletons MUST be accessed via module attribute (`module.singleton`) not via `from module import singleton`, so tests can replace them with `monkeypatch.setattr` without silent no-ops.
+    - Applications MUST expose a factory function (e.g., `create_app()`) rather than a bare module-level instance, so tests can construct isolated instances with clean state.
+    - Long-running operations (background tasks, pipelines) MUST be patchable at the call site, not only at the definition site.
+
+    **Source**: Cross-sub-system analysis — pattern found in all 3 sub-systems (pipeline-engine, web-api, tests).
+    **Evidence**: `pioneer_pipeline/web/state.py`, `pioneer_pipeline/web/app.py`, `pioneer_pipeline/web/routes/evaluate.py`, `tests/conftest.py`
+    **CDR Reference**: CDR-CONST-001 | **Status**: Proposed (pending team review)
+
+**Version**: 1.1.0 | **Last Amended**: 2026-11-01
+
+<!-- CDR: CDR-CONST-001, Date: 2026-11-01, Project: tech-pioneer -->
