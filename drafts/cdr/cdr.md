@@ -15,5 +15,7 @@ Context Directive Records (CDRs) track proposed accepted contributions team-ai-d
 | CDR-007 | evals-clarify | pattern | proposed | 2026-10-10 | — | 0d | binary-pass-fail-criteria |
 | CDR-008 | evals-analyze | pattern | proposed | 2026-10-10 | — | 0d | failure-type-routing |
 | CDR-009 | product-specify | pattern | proposed | 2026-10-10 | — | 0d | bilingual-setup-scripts |
+| CDR-010 | factory-mission | rule | proposed | 2026-11-03 | — | 0d | mandatory-worktree-isolation |
+| CDR-011 | factory-review | rule | proposed | 2026-11-03 | — | 0d | post-review-closure-protocol |
 
-**Stats**: 9 entries | Last Updated: 2026-10-10
+**Stats**: 11 entries | Last Updated: 2026-11-03
